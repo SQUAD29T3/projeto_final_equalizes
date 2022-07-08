@@ -11,3 +11,9 @@ p {
     color: #fff;
     text-align: justify;
 }
+
+
+.fixado {
+    position: fixed;
+    bottom: 0;
+}
