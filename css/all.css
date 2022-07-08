@@ -1,0 +1,13 @@
+body {
+    background-color: #212529;
+}
+
+h1 {
+    color: #FF5E2E;
+    text-shadow: 5px 5px 10px #000;
+}
+
+p {
+    color: #fff;
+    text-align: justify;
+}
