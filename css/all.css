@@ -1,10 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #212529;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+/* INÍCIO MENU */
+
+
+.btn-login {
+    background-color: #3d4650;
+    border-radius: 10px 10px 0 0;
+    transition: all .2s;
+}
+
+.btn-login:hover {
+    background-color: #FF5E2E;
+    color: #fff;
+}
+
+.float-right {
+    position: absolute;
+    right: 100px;
+}
+
+.btn-hover {
+    border-radius: 10px 10px 0 0;
+    transition: all .2s;
+}
+
+.btn-hover:hover {
+    background-color: #FF5E2E;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+}
+
+
+/* FIM MENU */
+
+
+
+/* INÍCIO MAIN */
+
+main {
+    background-color: #3d465038;
+    height: auto;
+    border-radius: 10px;
 }
 
 h1 {
-    color: #FF5E2E;
-    text-shadow: 5px 5px 10px #000;
+    background-color: #ffffff;
+    color: #212529;
+    border-radius: 10px;
+    text-align: center;
+
 }
 
 p {
@@ -12,8 +65,75 @@ p {
     text-align: justify;
 }
 
+.btn-saiba {
+    background-color: #3d465056;
+    border: 1px solid #fff;
+    color: #ffffff;
+    padding: 10px;
+    transition: all .2s;
+}
 
-.fixado {
-    position: fixed;
-    bottom: 0;
+.btn-saiba:hover {
+    background-color: #FF5E2E;
+    color: #ffffff;
+    border: 1px solid #fff;
+    padding: 10px;
+    transform: scale(1.02);
+
+}
+
+/* FIM MAIN */
+
+
+.parceiros {
+    height: 200px;
+    background-color: #ffffff;
+    color: #212529;
+}
+
+footer {
+height: auto;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+    /* INÍCIO MENU */
+
+
+    .btn-login {
+        background-color: #3d4650;
+        border-radius: 0;
+        transition: all .2s;
+    }
+
+    .btn-login:hover {
+        background-color: #FF5E2E;
+        color: #fff;
+    }
+
+    .float-right {
+        position: static;
+    }
+
+    .btn-hover {
+        border-radius: 0;
+        transition: all .2s;
+    }
+
+    .btn-hover:hover {
+        background-color: #FF5E2E;
+        border-radius: 0;
+        color: #fff;
+    }
+
+
+    /* FIM MENU */
+
+
+
+
+
 }
