@@ -14,28 +14,26 @@ body {
 
 .btn-login {
     background-color: #3d4650;
-    border-radius: 10px 10px 0 0;
     transition: all .2s;
 }
 
 .btn-login:hover {
-    background-color: #FF5E2E;
+    background-color: #ff5f2e9d;
     color: #fff;
 }
 
 .float-right {
     position: absolute;
+    display: inline-block;
     right: 100px;
 }
 
 .btn-hover {
-    border-radius: 10px 10px 0 0;
     transition: all .2s;
 }
 
 .btn-hover:hover {
-    background-color: #FF5E2E;
-    border-radius: 10px 10px 0 0;
+    background-color: #ff5f2e9d;
     color: #fff;
 }
 
@@ -74,7 +72,7 @@ p {
 }
 
 .btn-saiba:hover {
-    background-color: #FF5E2E;
+    background-color: #ff5f2e9d;
     color: #ffffff;
     border: 1px solid #fff;
     padding: 10px;
@@ -85,19 +83,46 @@ p {
 /* FIM MAIN */
 
 
+/* INÍCIO NOSSAS CAUSAS */
+
+.nossas-causas {
+    height: auto;
+    background-color: #ffffff;
+    color: #212529;
+    border-radius: 10px;
+    padding: 15px;
+    color: #212529;
+}
+
+.nossas-causas p {
+    color: #212529;
+}
+
+
+/* FIM NOSSAS CAUSAS */
+
+
+
 .parceiros {
     height: 200px;
     background-color: #ffffff;
     color: #212529;
 }
 
+
 footer {
 height: auto;
+color: #ff5f2e9d;
+}
+
+footer i:hover {
+    height: auto;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 992px) {
 
 
     /* INÍCIO MENU */
@@ -105,27 +130,30 @@ height: auto;
 
     .btn-login {
         background-color: #3d4650;
-        border-radius: 0;
+        width: 100%;
         transition: all .2s;
     }
 
     .btn-login:hover {
-        background-color: #FF5E2E;
+        background-color: #ff5f2e9d;
         color: #fff;
     }
 
     .float-right {
         position: static;
+
+        
+        
     }
 
     .btn-hover {
-        border-radius: 0;
+ 
         transition: all .2s;
     }
 
     .btn-hover:hover {
-        background-color: #FF5E2E;
-        border-radius: 0;
+        background-color: #ff5f2e9d;
+
         color: #fff;
     }
 
