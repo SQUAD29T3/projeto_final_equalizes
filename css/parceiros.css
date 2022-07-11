@@ -1,1 +1,61 @@
-header
+
+form {
+    background-color: #3d4650;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 1%;
+}
+
+
+/* INPUTS DE EMAIL E SENHA */
+input[type="email"], input[type="password"], input[type="text"], input[type="tel"], select
+
+{
+    width: 70%;
+    color: #212529;
+    font-weight: bold;
+    size: 16px;
+    padding: 10px;
+    outline: none;
+
+}
+
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus, select:focus 
+{
+
+    box-shadow: 0px 0 2px 2px  #212529;
+
+}
+
+
+
+/* INPUTs RADIO */
+
+input[type="radio"] {
+    width: 20px;
+    transition: all .3s;
+}
+
+
+input[type="radio"]:checked {
+    transform: scale(1.5);
+}
+
+button {
+    background-color: #ffffff;
+    width: 70%;
+    padding: 5px 20px;
+    border: 1px solid #ffffff;
+    transition: all .2s;
+}
+
+button:hover {
+    background-color: #ff5f2e9d;
+    color: #ffffff;
+    padding: 5px 20px;
+    border: 1px solid #ffffff;
+
+}
