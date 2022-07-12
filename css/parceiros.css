@@ -9,10 +9,12 @@
   .lead {
 text-align: center;
   }
+
   .display-5 {
 
     color:#ff5f2e9d;
     background-color: transparent;
+    
   }
      /* FIM HEADER EMPRESAS */
 
@@ -90,7 +92,7 @@ input[type="radio"]:checked {
     transform: scale(1.5);
 }
 
-button {
+input[type="submit"] {
     background-color: #ffffff;
     width: 70%;
     padding: 5px 20px;
@@ -98,7 +100,7 @@ button {
     transition: all .2s;
 }
 
-button:hover {
+input[type="submit"]:hover {
     background-color: #ff5f2e9d;
     color: #ffffff;
     padding: 5px 20px;
