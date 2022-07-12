@@ -1,4 +1,50 @@
 
+/* INÍCIO HEADER EMPRESAS */
+ 
+.jumbotron{
+    font-family: fantasy;
+    
+  }
+
+  .lead {
+text-align: center;
+  }
+  .display-5 {
+
+    color:#ff5f2e9d;
+    background-color: transparent;
+  }
+     /* FIM HEADER EMPRESAS */
+
+
+     /* INÍCIO MAIN EMPRESAS */
+
+  .paragrafoTitulo {
+
+    background-color: white;
+    color: black;
+    text-align: center;
+  }
+
+  .main2 {
+
+    background-color: transparent;
+    text-align: center;
+
+  }
+
+  .pFormulario {
+
+    text-align: center;
+    font-family: fantasy;
+    font-size: 30px;
+  }
+
+   /* FIM MAIN EMPRESAS */
+ 
+
+
+
 form {
     background-color: #3d4650;
     width: 100%;
