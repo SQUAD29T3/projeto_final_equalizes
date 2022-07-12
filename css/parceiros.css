@@ -66,6 +66,7 @@ input[type="email"], input[type="password"], input[type="text"], input[type="tel
     font-weight: bold;
     size: 16px;
     padding: 10px;
+    border: 1px solid #ff5f2e9d;
     outline: none;
 
 }
