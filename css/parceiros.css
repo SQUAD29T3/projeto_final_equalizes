@@ -1,5 +1,5 @@
 
-/* INÍCIO HEADER EMPRESAS */
+/* INÍCIO HEADER */
  
 .jumbotron{
     font-family: fantasy;
@@ -16,17 +16,24 @@ text-align: center;
     background-color: transparent;
     
   }
-     /* FIM HEADER EMPRESAS */
 
-
-     /* INÍCIO MAIN EMPRESAS */
-
-  .paragrafoTitulo {
-
-    background-color: white;
-    color: black;
-    text-align: center;
+ 
+  span {
+    color: white;
+    font-size: 25px;
   }
+
+  .ri-checkbox-circle-line {
+
+    color: green;
+  }
+
+     /* FIM HEADER  */
+
+
+     /* INÍCIO MAIN  */
+
+ 
 
   .main2 {
 
@@ -40,20 +47,31 @@ text-align: center;
     text-align: center;
     font-family: fantasy;
     font-size: 30px;
+    margin-top: 45px;
   }
 
-   /* FIM MAIN EMPRESAS */
+   /* FIM MAIN  */
  
-
 
 
 form {
     background-color: #3d4650;
     width: 100%;
 }
+ .estados {
 
+ color: #3c434bc4 ;
+
+ }
+
+ option {
+font-family: monospace, Geneva, Tahoma, sans-serif;
+
+
+ }
 label {
     margin-bottom: 1%;
+    font-family: monospace;
 }
 
 

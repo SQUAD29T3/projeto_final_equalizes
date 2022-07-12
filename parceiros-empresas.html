@@ -19,7 +19,10 @@
     <!-- CSS EXTERNO -->
     <link rel="stylesheet" href="css/all.css">
 
-    <title> Empresas parceiras | Equalizes </title>
+    <link rel="stylesheet" href="css/parceiros.css">
+
+
+    <title> Escolas parceiras | Equalizes </title>
 
 </head>
 
@@ -49,7 +52,7 @@
                         <div class="collapse navbar-collapse text-center" id="collapsibleNavId">
                             <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                                 <li class="nav-item active">
-                                    <a class="nav-link text-light btn-hover" href="index.html"> HOME <span
+                                    <a class="nav-link text-light btn-hover" href="#"> HOME <span
                                             class="visually-hidden">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
@@ -69,7 +72,8 @@
 
                                         <hr class="dropdown-divider">
 
-                                        <a class="dropdown-item text-center btn-hover" href="#">EMPRESAS</a>
+                                        <a class="dropdown-item text-center btn-hover"
+                                            href="parceiros-empresas.html">EMPRESAS</a>
                                     </div>
                                 </li>
 
@@ -93,8 +97,6 @@
         <!-- FIM MENU -->
 
 
-        <!-- INÍCIO ÁREA A SER TRABALHADA -->
-
         <header>
             <div class="jumbotron">
                 <div class="container-fluid">
@@ -104,121 +106,150 @@
                     </p>
                 </div>
             </div>
+
+                <!-- Inicio Checks -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div style="font-size: 20px">
+                            <i class="ri-checkbox-circle-line"></i> <span>Ter sei lá o que 1</span>
+                            <i class="ri-checkbox-circle-line"></i> <span>Ter sei lá o que 2</span>
+                            <i class="ri-checkbox-circle-line"></i> <span>Ter sei lá o que 3</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 text-center">
+                    <div style="font-size: 20px;">
+                        <i class="ri-checkbox-circle-line"></i> <span>Ter sei lá o que 4</span>
+                        <i class="ri-checkbox-circle-line"></i> <span>Ter sei lá o que 5</span>
+                        <i class="ri-checkbox-circle-line"></i> <span>Ter sei lá o que 6</span>
+                    </div>
+                </div>
+               
+                <!-- Fim Checks -->
+
         </header>
 
         <main class="main2">
-            <p class="paragrafoTitulo">Informações sobre pre-requisitos das empresas</p>
-            <p class="paragrafoTitulo">Informações sobre pre-requisitos das empresas</p>
-            <p class="paragrafoTitulo">Informações sobre pre-requisitos das empresas</p>
 
 
-            <!-- Inicio Formulario -->
-            <div class="row mt-5">
-                <div class="col-4 mt-4 offset-4">
-                    <form>
-                        <p class="pFormulario">
-                            Faça seu Cadastro Abaixo :
-                        </p>
+                <!-- Inicio Formulario -->
 
-                        <div class="mb-2">
-                            <label for="exampleRazao" class="form-label">Razão Social</label>
-                            <input type="text" class="form-control" id="exampleRazao">
-                            <div id="texto" class="form-text">Digite a razão social da empresa</div>
+                <form action="" class="">
+
+                    <div class="row mt-5">
+
+                        <div class="col-12">
+        
+                            <p class="pFormulario">
+                                Faça seu Cadastro Abaixo
+                            </p>
                         </div>
 
-                        <div class="mb-1">
-                            <label for="exampleCnpj" class="form-label">CNPJ</label>
-                            <input type="text" class="form-control" id="exampleCnpj" aria-describedby="emailHelp">
-                            <div id="numeroCnpj" class="form-text">Digite o número do Cnpj</div>
-                        </div>
+                    <div class="col-12 mt-4">
+                        <label>Razão Social</label> <br>
+                        <input type="text" placeholder="Digite a razão social" required>
+                    </div>
 
-                        <input class="form-control mt-4" list="datalistOptions" id="exampleDataList"
-                            placeholder="Selecione o Estado">
-                        <small id="helpId" class="form-text text-muted">
-                            <datalist id="datalistOptions">
-                                <option value="...">
-                                <option value="...">
-                                <option value="...">
-                                <option value="...">
-                                <option value="...">
-                                <option value="...">
-                            </datalist>
+                    <div class="col-12 mt-3">
+                        <label>CNPJ</label> <br>
+                        <input type="text" name="cnpj" minlength="12" maxlength="20" id="cnpj"
+                            placeholder="Digite o CNPJ (Apenas Números)" required>
+                    </div>
 
-                            <input class="form-control mt-5" list="datalistOptions" id="exampleDataList"
-                                placeholder="Selecione a Cidade">
-                            <small id="helpId" class="form-text text-muted">
-                                <datalist id="datalistOptions">
-                                    <option value="...">
-                                    <option value="...">
-                                    <option value="...">
-                                    <option value="...">
-                                    <option value="...">
-                                    <option value="...">
-                                </datalist>
-                                <!-- VER O PQ DO TITULO DO FORM NAO SAIR EM BRANCO COMO OS DOIS PRIMEIROS -->
+                    <div class="col-12 mt-3">
 
-                                <div class="mt-4">
-                                    <label for="exampleEndereco" class="form-label">Endereço</label>
-                                    <input type="text" class="form-control" id="exampleEndereco">
-                                    <div id="text" class="form-text">Digite o endereço da empresa</div>
-                                </div>
+                        <label>Estado</label> <br>
 
-                                <div class="mt-4">
-                                    <label for="exampleTel" class="form-label">Telefone</label>
-                                    <input type="tel" class="form-control" id="exampleTel">
-                                    <div id="tel" class="form-text">Digite um telefone para contato</div>
-                                </div>
+                        <select id="estado" name="estado" required class="estados">
+                            <option value="0">Escolha o estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
 
-                                <div class="mt-4">
-                                    <label for="exampleIRep" class="form-label">Representante Legal</label>
-                                    <input type="text" class="form-control" id="exampleRep">
-                                    <div id="repText" class="form-text">Digite o nome do representante</div>
-                                </div>
+                    <div class="col-12 mt-3">
+                        <label>Endereço</label> <br>
+                        <input type="text" placeholder="Digite o endereço" required>
+                    </div>
 
-                                <div class="mt-4">
-                                    <label for="exampleEmail" class="form-label">Digite o E-mail</label>
-                                    <input type="email" class="form-control" id="exampleEmail">
-                                    <div id="email" class="form-text">Digite o e-mail</div>
-                                </div>
+                    <div class="col-12 mt-3">
+                        <label>Telefone</label> <br>
+                        <input type="tel" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
+                    </div>
 
-                                <div class="mt-4">
-                                    <label for="exampleInputPassword1" class="form-label">Crie uma Senha</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
-                                    <div id="passwordHelp" class="form-text">Crie uma senha de 10 digitos</div>
-                                </div>
+                    <div class="col-12 mt-3">
+                        <label>Responsável</label> <br>
+                        <input type="text" placeholder="Digite o nome do responsável" required>
+                    </div>
 
-                                <div class="mt-4">
-                                    <label for="exampleInputPassword1" class="form-label">Confirme a Senha</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1">
-                                    <div id="passwordHelp" class="form-text">Confirme a senha digitada</div>
-                                </div>
+                    <div class="col-12 mt-4">
+                        <label>E-mail</label> <br>
+                        <input type="email" placeholder="Digite o e-mail">
+                    </div>
 
-                                <label for="dados" class="form-label mt-4">Os dados estão corretos?</label>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="opc" id="" value="Sim">
-                                    <label class="form-check-label" for="">Sim</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="opc" id="" value="Não">
-                                    <label class="form-check-label" for="">Não</label>
-                                </div>
+                    <div class="col-12 mt-4">
+                        <label>Crie uma Senha</label> <br>
+                        <input type="password" placeholder="Crie uma senha de 10 digitos" maxlength="10" required>
+                    </div>
 
-                                <button class="btn btn-primary" type="submit">Enviar</button>
-                    </form>
-                </div>
+                    <div class="col-12 mt-4">
+                        <label>Confirme a Senha</label> <br>
+                        <input type="password" placeholder="Confirme a senha digitada" maxlength="10" required>
+                    </div>
+
+
+                    <div class="col-12 mt-3">
+                        <label>Os dados informados acima estão corretos?</label>
+                    </div>
+
+                    <div class="col-12 mt-3">
+                        <input type="radio" name="opc" id="" value="Sim">
+                        <label for="Sim">Sim</label>
+
+                        <input type="radio" name="opc" id="" value="Não">
+                        <label for="nao">Não</label>
+                    </div>
+
+                    <div class="col-12 mt-3 mb-3">
+                        <input type="submit" value="Enviar">
+                    </div>
+
+                </form>
+
+                <!-- Fim Formulario -->
+
             </div>
-            <!-- Fim Formulario -->
-
-
-
-
 
 
         </main>
 
-
-
-        <!-- FIM ÁREA A SER TRABALHADA -->
 
 
 
