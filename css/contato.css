@@ -1,0 +1,120 @@
+.bg-white {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+/* ICONES */
+.icon i {
+    background-color: #212529;
+    padding: 10px;
+    border-radius: 50%;
+    color: #ffffff;
+
+}
+
+/* DIV QUE ENVOLVE O ICON + PARÁGRAFO */
+.icon-informacao {
+
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+
+
+/* DESCRIÇÃO DOS CONTATOS -TELEFONE, EMAIL, ENDEREÇO */
+
+.descricao {
+    color: #212529;
+    font-size: 16px;
+    
+    font-weight: bold;
+    margin-left: 10px;
+
+}
+
+
+
+/* FORMULÁRIO */
+.bg-divForm {
+    background-color: #212529;
+
+}
+
+
+form {
+    width: 100%;
+}
+
+/* INPUTS DE EMAIL E SENHA */
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+
+    background-color: #212529;
+    width: 100%;
+    color: #ffffff;
+    font-weight: bold;
+    size: 14px;
+    padding: 5px;
+    border: 1px solid #ff5f2e9d;
+    outline: none;
+
+}
+
+optgroup {
+    background-color: #212529;   
+}
+
+select {
+    text-align: center;
+    background-color: #ff5f2e9d;
+    color: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+
+    width: 100%;
+    box-shadow: 0 0 2px 2px #ff5f2e9d;
+
+}
+
+/* BOTÃO ENVIAR */
+
+input[type="submit"] {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 5px 20px;
+    border: 1px solid #ffffff;
+    transition: all .2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff5f2e9d;
+    color: #ffffff;
+    padding: 5px 20px;
+    border: 1px solid #ffffff;
+
+}
+
+
+/* MEDIA CONFORME md do Bootstrap */
+@media only screen and (max-width: 768px) {
+
+
+/* Usar se houver necessidade */
+
+
+}
