@@ -8,7 +8,7 @@ main {
 
 .div-contatos {
 
-    background-image: url(/img/contato.jpg);
+    background-image: url(../img/contato.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
