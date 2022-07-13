@@ -3,12 +3,13 @@
     background-color: #3d465038;
     color: #ffffff;
     height: auto;
-    border-radius: 10px;
+    box-shadow: 0 0 2px 2px #ffffff;
 }
 
 
 form {
     width: 100%;
+    padding: 10px;
 }
 
 /* LABEL PARCEIROS */
