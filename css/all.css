@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3d4650;
+    border-radius: 20px;
+}
+
+/* FIM SCROLLBAR */
+
+
 body {
     background-color: #212529;
     font-family: sans-serif, Arial, Helvetica;
@@ -112,8 +128,8 @@ p {
 
 
 footer {
-height: auto;
-color: #ff5f2e9d;
+    height: auto;
+    color: #ff5f2e9d;
 }
 
 footer i:hover {
@@ -143,12 +159,12 @@ footer i:hover {
     .float-right {
         position: static;
 
-        
-        
+
+
     }
 
     .btn-hover {
- 
+
         transition: all .2s;
     }
 
