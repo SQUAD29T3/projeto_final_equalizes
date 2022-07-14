@@ -28,7 +28,7 @@ html {
 /* INÍCIOICON DO SCROLL TOP */
 
 #icon-top {
-    background-color: #ff5f2e9d;
+    background-color: #3d4650;
     color: #ffffff;
     width: 35px;
     height: 35px;
@@ -48,9 +48,8 @@ html {
 }
 
 #icon-top:hover {
-    background-color: #3d4650;
+    background-color: #ff5f2e9d;
 }
-
 
 /* FIM ICON DO SCROLL TOP */
 
