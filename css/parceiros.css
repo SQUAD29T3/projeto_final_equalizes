@@ -26,6 +26,12 @@ text-align: center;
   .ri-checkbox-circle-line {
 
     color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  p {
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
      /* FIM HEADER  */
@@ -48,6 +54,11 @@ text-align: center;
     font-family: fantasy;
     font-size: 30px;
     margin-top: 45px;
+  }
+  
+  .p2Formulario {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
    /* FIM MAIN  */
