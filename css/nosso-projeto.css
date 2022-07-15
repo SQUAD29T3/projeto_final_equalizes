@@ -1,0 +1,71 @@
+
+
+
+/* TEXTO NOSSO PROJETO */
+
+
+
+
+
+/* CARDS */
+
+h5 {
+    color: #212529;
+}
+
+.card-escolas {
+    background-image: url(/img/escolas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    border-radius: 40px;
+
+}
+
+.card-empresas {
+    background-image: url(/img/empresas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: auto;
+    padding: 10px;
+
+}
+
+
+.card-body p {
+    background-color: #212529c2;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+.btn-cadastrar {
+    background-color: #ff5f2e;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    padding: 10px;
+    transition: all .2s;
+}
+
+.btn-cadastrar:hover {
+    background-color: #b64928;
+    color: #ffffff;
+    font-weight: bold;
+
+    border-radius: 40px;
+    padding: 10px;
+    transform: scale(1.02);
+}
