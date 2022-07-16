@@ -14,7 +14,7 @@ h5 {
 }
 
 .card-escolas {
-    background-image: url(/img/escolas.png);
+    background-image: url(../img/escolas.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: auto;
@@ -23,7 +23,7 @@ h5 {
 }
 
 .card-empresas {
-    background-image: url(/img/empresas.png);
+    background-image: url(../img/empresas.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
