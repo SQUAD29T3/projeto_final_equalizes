@@ -1,0 +1,22 @@
+
+img {
+    margin-top: 30px;
+}
+
+
+#vamos_equalizar {
+    background-color: #ff5f2e6e;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 40px;
+    border-radius: 15px;
+    max-width: 300px;
+
+
+}
+
+
+.texto-centralizado {
+    display: flex;
+    justify-content: center;
+}
