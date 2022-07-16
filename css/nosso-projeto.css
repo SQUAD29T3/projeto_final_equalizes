@@ -17,7 +17,8 @@ h5 {
     background-image: url(../img/escolas.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: auto;
+    background-position: bottom 100%;
+    height: 100%;
     border-radius: 40px;
 
 }
@@ -26,8 +27,9 @@ h5 {
     background-image: url(../img/empresas.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top 50% left 50%;
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 40px;
 
 }
@@ -37,7 +39,7 @@ h5 {
     flex-direction: column;
     justify-content: space-between;
 
-    height: auto;
+    height: 100%;
     padding: 10px;
 
 }
