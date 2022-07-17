@@ -1,6 +1,16 @@
+
+h1 {
+    color: #0C7EB3;
+    text-align: center;
+    font-family: fantasy;
+}
+
+
 main {
+    border-radius: 0;
+    background-color: #164B66;
     padding: 2%;
-    box-shadow: 0 0 2px 2px #ffffff;
+
 }
 
 
@@ -66,11 +76,7 @@ main {
 form {
     /* background-color: #171f27; */
     border-radius: 10px;
-<<<<<<< HEAD
-    
-=======
-    padding: 10px;
->>>>>>> 710c9e4a347d25adaa519a14da5cc2979c2dc98e
+
 }
 
 /* INPUTS DE EMAIL E SENHA */
@@ -86,7 +92,7 @@ select {
     font-weight: bold;
     size: 14px;
     padding: 5px;
-    border: 1px solid #ff5f2e9d;
+    border: none;
     outline: none;
 
 }
@@ -104,7 +110,7 @@ optgroup {
 
 select {
     text-align: center;
-    background-color: #ff5f2e9d;
+    background-color: #0C7EB3;
     color: #ffffff;
 }
 
@@ -114,25 +120,28 @@ textarea:focus,
 select:focus {
 
     width: 100%;
-    box-shadow: 0 0 2px 2px #ff5f2e9d;
+    box-shadow: 0 0 2px 2px #164B66;
 
 }
 
 /* BOTÃO ENVIAR */
 
 input[type="submit"] {
-    background-color: #ffffff;
+    background-color: #0C7EB3;
+    color: #ffffff;
+    font-weight: bold;
     width: 100%;
     padding: 5px 20px;
-    border: 1px solid #ffffff;
+    border: none;
     transition: all .2s;
 }
 
 input[type="submit"]:hover {
-    background-color: #ff5f2e9d;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #164B66;
+    font-weight: bold;
     padding: 5px 20px;
-    border: 1px solid #ffffff;
+
 
 }
 

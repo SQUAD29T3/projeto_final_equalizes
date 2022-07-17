@@ -1,108 +1,113 @@
-
 /* INÍCIO HEADER */
- 
-.jumbotron{
-    font-family: fantasy;
-    
-  }
 
-  .lead {
-text-align: center;
-  }
+.jumbotron {
+  font-family: fantasy;
+  text-align: center;
 
-  .display-5 {
+}
 
-    color:#ff5f2e9d;
-    background-color: transparent;
-    
-  }
 
- 
-  span {
-    color: white;
-    font-size: 25px;
-  }
+/* TÍTULO JUMBOTRON */
+.display-5 {
 
-  .ri-checkbox-circle-line {
+  color: #0C7EB3;
+  background-color: transparent;
 
-    color: green;
-   
-  }
+}
 
-  p {
+
+span {
+  color: white;
+  font-size: 25px;
+}
+
+.ri-checkbox-circle-line {
+
+  color: green;
+
+}
+
+p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+}
 
-     /* FIM HEADER  */
+/* FIM HEADER  */
 
 
-     /* INÍCIO MAIN  */
+/* INÍCIO MAIN  */
 
- 
 
-  .main2 {
 
-    background-color: transparent;
-    text-align: center;
+.main2 {
 
-  }
+  background-color: transparent;
+  text-align: center;
 
-  .pFormulario {
+}
 
-    text-align: center;
-    font-family: fantasy;
-    font-size: 30px;
-    margin-top: 45px;
-  }
-  
-  .p2Formulario {
-    text-align: center;
-  }
+.pFormulario {
 
-   /* FIM MAIN  */
- 
+  text-align: center;
+  font-family: fantasy;
+  font-size: 30px;
+  margin-top: 45px;
+}
+
+.p2Formulario {
+  text-align: center;
+}
+
+/* FIM MAIN  */
+
 
 
 form {
-    background-color: #3d4650;
-    width: 100%;
+  background-color: #164B66;
+  width: 100%;
 }
- .estados {
 
- color: #3c434bc4 ;
+.estados {
 
- }
+  color: #3c434bc4;
 
- option {
-font-family: monospace, Geneva, Tahoma, sans-serif;
+}
+
+option {
+  font-family: monospace, Geneva, Tahoma, sans-serif;
 
 
- }
+}
+
 label {
-    margin-bottom: 1%;
-    font-family: monospace;
+  margin-bottom: 1%;
+  font-family: monospace;
 }
 
 
 /* INPUTS DE EMAIL E SENHA */
-input[type="email"], input[type="password"], input[type="text"], input[type="tel"], select
-
-{
-    width: 70%;
-    color: #212529;
-    font-weight: bold;
-    size: 16px;
-    padding: 10px;
-    border: 1px solid #ff5f2e9d;
-    outline: none;
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+select {
+  width: 70%;
+  color: #212529;
+  font-weight: bold;
+  size: 16px;
+  padding: 10px;
+  border: none;
+  outline: none;
 
 }
 
 
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus, select:focus 
-{
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
 
-    box-shadow: 0px 0 2px 2px  #212529;
+  box-shadow: 0px 0 2px 2px #0C7EB3;
 
 }
 
@@ -111,27 +116,30 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 /* INPUTs RADIO */
 
 input[type="radio"] {
-    width: 20px;
-    transition: all .3s;
+  width: 20px;
+  transition: all .3s;
 }
 
 
 input[type="radio"]:checked {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 input[type="submit"] {
-    background-color: #ffffff;
-    width: 70%;
-    padding: 5px 20px;
-    border: 1px solid #ffffff;
-    transition: all .2s;
+  background-color: #0C7EB3;
+  color: #ffffff;
+  font-weight: bold;
+  width: 70%;
+  padding: 5px 20px;
+  border: none;
+  transition: all .2s;
 }
 
 input[type="submit"]:hover {
-    background-color: #ff5f2e9d;
-    color: #ffffff;
-    padding: 5px 20px;
-    border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: #0C7EB3;
+  font-weight: bold;
+  padding: 5px 20px;
+  border: none;
 
 }

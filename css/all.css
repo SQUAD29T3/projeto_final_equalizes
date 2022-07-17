@@ -12,12 +12,12 @@ html {
 /* SCROLLBAR */
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
     background-color: #212529;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #3d4650;
+    background-color: #164B66;
     border-radius: 20px;
 }
 
@@ -25,7 +25,7 @@ html {
 
 
 
-/* INÍCIOICON DO SCROLL TOP */
+/* INÍCIO ICON DO SCROLL TOP */
 
 #icon-top {
     background-color: #3d4650;
@@ -48,7 +48,7 @@ html {
 }
 
 #icon-top:hover {
-    background-color: #ff5f2e9d;
+    background-color: #164B66;
 }
 
 /* FIM ICON DO SCROLL TOP */
@@ -62,6 +62,9 @@ body {
 
 /* INÍCIO MENU */
 
+.navbar-toggler:focus {
+    box-shadow: 0 0 2px 2px #fff;
+}
 
 .btn-login {
     background-color: #3d4650;
@@ -69,7 +72,7 @@ body {
 }
 
 .btn-login:hover {
-    background-color: #ff5f2e9d;
+    background-color: #164B66;
     color: #fff;
 }
 
@@ -84,12 +87,187 @@ body {
 }
 
 .btn-hover:hover {
-    background-color: #ff5f2e9d;
+    background-color: #164B66;
     color: #fff;
 }
 
 
 /* FIM MENU */
+
+
+
+/* INÍCIO HEADER */
+
+#banner {
+    background-image: url(../img/header_not.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+  
+
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.display-flex h1 {
+
+    color:  #212529;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #fff;
+}
+
+.display-flex p {
+    background-color: #3d465049;
+    padding: 10px;
+    color:  #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #212529;
+}
+
+/* FIM HEADER */
+
+
+/* INÍCIO MISSÃO */
+
+.missao {
+    background-color: #164B66;
+    text-align: center;
+    padding: 5%;
+ 
+}
+
+
+
+.missao p {
+
+    color: #fff;
+}
+
+
+/* FIM MISSÃO */
+
+
+
+/* INÍCIO PROJETO */
+
+.projeto {
+    background-color: #0C7EB3;
+    text-align: center;
+    padding: 5%;
+}
+
+
+.projeto p h1 {
+    color: #fff;
+}
+
+
+/* FIM PROJETO */
+
+
+
+/* INÍCIO GALLERY HOVER */
+
+.gallery {
+
+    width: auto;
+    height: 60vmin;
+    display: flex;
+ 
+    gap: 10px;
+
+}
+
+.gallery div {
+    box-shadow: 2px 2px 2px 1px #212529;
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.gallery div:hover {
+    flex: 4;
+}
+
+
+#computadores {
+    background-image: url(../img/girl-computador.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    
+
+}
+
+
+#infraestrutura {
+    background-image: url(../img/infraestrutura.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+
+#estudoremoto {
+    background-image: url(../img/kid-tablet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+
+.color-dark {
+ 
+    color: #212529;
+
+}
+
+.back-texto {
+    background-color: rgba(255, 255, 255, 0.603);
+    height: 50%;
+    text-align: center;
+    padding: 2%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* FIMGALLERY HOVER */
+
 
 
 
@@ -102,13 +280,11 @@ main {
     border-radius: 10px;
 }
 
-h1 {
+main h1 {
     background-color: #ffffff;
     color: #212529;
     border-radius: 10px;
     text-align: center;
-
-
 }
 
 p {
@@ -166,7 +342,7 @@ p {
 
 footer {
     height: auto;
-    color: #ff5f2e9d;
+    color: #164B66;
 }
 
 footer i:hover {
@@ -183,19 +359,18 @@ footer i:hover {
 
 
     .btn-login {
-        background-color: #3d4650;
+        background-color: transparent;
         width: 100%;
         transition: all .2s;
     }
 
     .btn-login:hover {
-        background-color: #ff5f2e9d;
+        background-color: #164B66;
         color: #fff;
     }
 
     .float-right {
         position: static;
-
 
 
     }
@@ -206,7 +381,7 @@ footer i:hover {
     }
 
     .btn-hover:hover {
-        background-color: #ff5f2e9d;
+        background-color: #164B66;
 
         color: #fff;
     }
@@ -215,3 +390,25 @@ footer i:hover {
     /* FIM MENU */
 
 }
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    /* INÍCIO GALLERY HOVER */
+
+.gallery {
+
+    width: auto;
+    height: 60vmin;
+    display: flex;
+    flex-direction: column;
+ 
+    gap: 5px;
+
+}
+
+
+}
+
