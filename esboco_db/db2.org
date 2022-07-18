@@ -1,0 +1,118 @@
+#+title: Db2
+
+|---|
+# perfil para empresa/escola
+| PerfilEqualize   |
+|------------------|
+| IdPerfil{pk,int,not null}  |
+| NomePerfil{varchar,not null} |
+| Cnpj  {fk,int,not null} |
+| Senha            |
+| InterresesPerfil |
+| PerfilAtivo      |
+| DataCriado       |
+| DataAtualizado   |
+| TipoPerfil       |
+
+# guarda os interreses
+# eles servem como uma forma do usuario sinalizar
+# suas vontades, uma empresa mostra com oq ela pode ajudar
+# no site pode ter outros nomes
+# mas os interreses da empresa seriam oq ela quer oferecer/ajudar
+# os da escola seria oq ela precisa e caso ela tenha coisas sobrando
+# seria uma forma de ela oferecelas
+| Interrese       |
+|-----------------|
+| IdInterrese     |
+| IdPerfil        |
+| InterreseTexto  |
+| InterreseImagem |
+| DataCriado      |
+| DataAtualizado  |
+| Cnpj            |
+
+| PerfilPermissao |
+|-----------------|
+| IdPerfil        |
+| TipoPerfil      |
+# tipo perfil teria todas os tipos possives(uma lista de ints)
+# tipo perfil admin por exemplo(seria o 0)
+# esses sets dxa vc ter as permissoes configuradas pra cada tipo
+# deve precisar de um admin,escola,empresa????
+
+#TODO
+# uma forma de lidar com a interrasao empresa escola
+# quando uma empresa e uma escola querem interagir
+# elas comecam um projeto que resolva algum dos interreses
+# nao seria necessario que os interreses em comum exista antes
+# o processo de criacar de projeto tem que ser finalido
+| Projeto         |                                      |
+|-----------------+--------------------------------------|
+| cnpj            | #identificar_entidades_participantes |
+| idprojeto       |                                      |
+| interreseperfil | #interrese_de_todos_participantes    |
+| DataCriado      |                                      |
+| DataEntrega     |                                      |
+| Estado          | #se_esta_sendo_feito_algo            |
+
+|---|
+# entidade escola[[]]
+| Escola                                |
+|---------------------------------------|
+| cnpj{pk,int,not null}                 |
+| nome{varchar,not null}                |
+| diretor_responsavel{varchar,not null} |
+| vice_diretor{varchar,not null}        |
+| coordenador{varchar,not null}         |
+| secretaria{varchar,not null}          |
+| cep{int,not null}                     |
+| rua{varchar,not null}                 |
+| numero{int,not null}                  |
+| bairro{varchar,not null}              |
+| cidade{varchar,not null}              |
+| uf{char,not null}                     |
+| qt_alunos{int,not null}               |
+| nivel_escolar{varchar,not null}       |
+| telefone{int,not null}                |
+| email{varchar,not null}               |
+| turnos{varchar,not null}              |
+| pedidos_em_andamento{int}             | #pensar
+
+|---|
+# entidade empresa
+| empresa                         |
+|---------------------------------|
+| cnpj{pk,int,not null}           |
+| atividade_empresarial{varchar}  |
+| nome_fantasia{varchar,not null} |
+| propietario{varchar,not null}   |
+| socios{varchar,not null}        |
+| administrador{varchar,not null} |
+| email{varchar,not null}         |
+| telefone{int,not null}          |
+| cep{int,not null}               |
+| rua{varchar,not null}           |
+| numero{int,not null}            |
+| bairro{varchar,not null}        |
+| cidade{varchar,not null}        |
+| uf{char,not null}               |
+| razao_social{varchar}           |
+
+|---|
+#TODO
+# pensar a tabela assunto direito
+# informacoes entrar em contato
+| contato                            |
+|------------------------------------|
+| nome{varchar,not null}             |
+| email{varchar,pk,not null}         |
+| assunto_numero{int,fk,not null}    |
+| assunto_texto{varchar,fk,not null} |
+
+# texto da parte de contato do site
+| assunto                         |
+|---------------------------------|
+| assunto_numero{int,pk,not null} |
+| assunto_texto{text,pk}          |
+
+|---|
