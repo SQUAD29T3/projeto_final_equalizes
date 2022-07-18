@@ -405,7 +405,7 @@ footer i:hover {
     display: flex;
     flex-direction: column;
  
-    gap: 5px;
+    gap: 10px;
 
 }
 
@@ -413,6 +413,19 @@ footer i:hover {
 #computadores, #infraestrutura, #estudoremoto {
     background-position: center;
 }
+
+
+
+
+.back-texto {
+    background-color: rgba(255, 255, 255, 0.603);
+    height: auto;
+    text-align: center; 
+}
+
+
+
+
 
 
 }
