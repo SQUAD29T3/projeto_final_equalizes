@@ -1,0 +1,129 @@
+#+title: RecodeDb
+# entidade escola
+| Escola                                |
+|---------------------------------------|
+| cnpj{pk,int,not null}                 |
+| nome{varchar,not null}                |
+| diretor_responsavel{varchar,not null} |
+| vice_diretor{varchar,not null}        |
+| coordenador{varchar,not null}         |
+| secretaria{varchar,not null}          |
+| cep{int,not null}                     |
+| rua{varchar,not null}                 |
+| numero{int,not null}                  |
+| bairro{varchar,not null}              |
+| cidade{varchar,not null}              |
+| uf{char,not null}                     |
+| qt_alunos{int,not null}               |
+| nivel_escolar{varchar,not null}       |
+| telefone{int,not null}                |
+| email{varchar,not null}               |
+| turnos{varchar,not null}              |
+| pedidos_em_andamento{int}             |
+
+|---|
+# usuario para entidade escola
+| user_escola                    |
+|--------------------------------|
+| cnpj{fk,not null}              |
+| id{pk,not null}                |
+| senha{varchar,not null}        |
+| interreses{varchar}            |
+| nome_usuario{varchar,not null} |
+| telefone{int,fk,not null}      |
+| email{varchar,fk,not null}     |
+| descricao{varchar}             |
+| excessos{varchar}              |
+# caso a escola tenha coisas sobrando ela pode oferecelas
+| tipo_perm{int,fk,not null} |
+
+|---|
+# entidade empresa
+| empresa                         |
+|---------------------------------|
+| cnpj{pk,int,not null}           |
+| atividade_empresarial{varchar}  |
+| nome_fantasia{varchar,not null} |
+| propietario{varchar,not null}   |
+| socios{varchar,not null}        |
+| administrador{varchar,not null} |
+| email{varchar,not null}         |
+| telefone{int,not null}          |
+| cep{int,not null}               |
+| rua{varchar,not null}           |
+| numero{int,not null}            |
+| bairro{varchar,not null}        |
+| cidade{varchar,not null}        |
+| uf{char,not null}               |
+| razao_social{varchar}           |
+
+|---|
+# usuario para entidade empresa
+| user_empresa                   |
+|--------------------------------|
+| cnpj{pk,int,not null}          |
+| nome_usuario{varchar,not null} |
+| senha{varchar,not null}        |
+| telefone{int,fk,not null}      |
+| email{varchar,fk,not null}     |
+| oferta_empresa{int,fk}         |
+| tipo_perm{int,fk,not null}     |
+| descricao{varchar}             |
+
+|---|
+# informacoes entrar em contato
+| contato                            |
+|------------------------------------|
+| nome{varchar,not null}             |
+| email{varchar,pk,not null}         |
+| assunto_numero{int,fk,not null}    |
+| assunto_texto{varchar,fk,not null} |
+
+|---|
+# texto da parte de contato do site
+| assunto                         |
+|---------------------------------|
+| assunto_numero{int,pk,not null} |
+| assunto_texto{text,pk}          |
+
+|---|
+#TODO
+| permissao_usuario       |
+|-------------------------|
+| tipo_permissao{int,not null} |
+| cnpj{int,fk,not null}   |
+
+|---|
+#TODO
+| Projetos                     |
+|------------------------------|
+| cnpj_escola{int,fk,not null} |
+| cnpj_empresa{int,fk}         |
+| oferta_empresa{varchar,fk}    |
+|                              |
+
+|---|
+#TODO
+|Ofertando |
+|---|
+|id_oferta{int,pk,not null} |
+|oferta_descricao{varchar,not null} |
+|Regiao{} |
+# definir validade por regiao
+# usar cidade?uf?definir
+|img_oferta{???} |
+#definir
+
+
+
+
+
+
+# TODO: *pesquisar funcionamento de permissoes em dbs
+# *pensar sobrre assuntos e contato
+# *criar relacoes das entidades
+# *conferir com o site a necessidade de implementar mais alguma coisa
+# *planejar estoque de produtos e servicos
+# *organizacao de rede social/feed talvez seja mais facil
+# *funcionamento do turnos,9 ints um pra cada combinacao?talvez tenha outras formas
+# *como seria um pedidos em andamento,analisar ideia
