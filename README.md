@@ -6,6 +6,7 @@
 <h3> Nome do projeto: </h3> 
 <h4> Equalizes. </h4>
 
+<p>Acesse o site (Aplicação Funcional) clicando <a href="https://squad29t3.github.io/projeto_final_equalizes/" target="_blank"> aqui </a> </p>
 
 <h2> INTEGRANTES: </h2>
 
