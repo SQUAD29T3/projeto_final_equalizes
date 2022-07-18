@@ -51,7 +51,7 @@ p {
   text-align: center;
   font-family: fantasy;
   font-size: 30px;
-  margin-top: 45px;
+
 }
 
 .p2Formulario {
@@ -74,13 +74,14 @@ form {
 }
 
 option {
+  
   font-family: monospace, Geneva, Tahoma, sans-serif;
 
 
 }
 
 label {
-  margin-bottom: 1%;
+
   font-family: monospace;
 }
 
@@ -91,11 +92,14 @@ input[type="password"],
 input[type="text"],
 input[type="tel"],
 select {
-  width: 70%;
+
+  width: 100%;
+
   color: #212529;
   font-weight: bold;
   size: 16px;
   padding: 10px;
+
   border: none;
   outline: none;
 
