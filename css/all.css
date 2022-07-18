@@ -57,10 +57,11 @@ html {
 
 body {
     background-color: #212529;
-    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* INÍCIO MENU */
+
 
 .navbar-toggler:focus {
     box-shadow: 0 0 2px 2px #fff;
@@ -99,36 +100,37 @@ body {
 /* INÍCIO HEADER */
 
 #banner {
-    background-image: url(../img/header_not.jpg);
+    background-image: url(../img/header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 350px;
-  
+
+    position: relative;
+
 
 }
 
-.display-flex {
+.filtro4 {
+    background-color: #212529c0;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-
-}
-
-.display-flex h1 {
-
-    color:  #212529;
+    align-items: center;
+    padding: 20px;
     font-weight: bold;
-    text-shadow: 2px 2px 2px #fff;
+
 }
 
-.display-flex p {
-    background-color: #3d465049;
-    padding: 10px;
-    color:  #fff;
-    font-weight: bold;
-    text-shadow: 2px 2px 2px #212529;
-}
+
+
+
+
 
 /* FIM HEADER */
 
@@ -139,7 +141,7 @@ body {
     background-color: #164B66;
     text-align: center;
     padding: 5%;
- 
+
 }
 
 
@@ -163,10 +165,6 @@ body {
 }
 
 
-.projeto p h1 {
-    color: #fff;
-}
-
 
 /* FIM PROJETO */
 
@@ -179,7 +177,7 @@ body {
     width: auto;
     height: 60vmin;
     display: flex;
- 
+
     gap: 10px;
 
 }
@@ -205,13 +203,25 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
+    position: relative;
+
+}
+
+
+.filtro1 {
+    background-color: #164b66ad;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     font-weight: bold;
-    
 
 }
 
@@ -221,14 +231,29 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
+    position: relative;
+
+}
+
+
+.filtro2 {
+    background-color: #fa759d7a;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     font-weight: bold;
 
 }
+
+
+
 
 
 #estudoremoto {
@@ -236,34 +261,38 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
+    position: relative;
+
+}
+
+
+.filtro3 {
+    background-color: #fdf38650;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     font-weight: bold;
 
 }
 
 
-.color-dark {
- 
-    color: #212529;
+.filtro1,
+.filtro2,
+.filtro3 p,
+h1,
+h5 {
 
+    color: #ffffff;
+    text-shadow: 4px 2px 5px #000000, 4px 2px 5px #fff, 4px 2px 5px #000000;
 }
 
-.back-texto {
-    background-color: rgba(255, 255, 255, 0.603);
-    height: 50%;
-    text-align: center;
-    padding: 2%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
 
 
 /* FIMGALLERY HOVER */
@@ -280,12 +309,7 @@ main {
     border-radius: 10px;
 }
 
-main h1 {
-    background-color: #ffffff;
-    color: #212529;
-    border-radius: 10px;
-    text-align: center;
-}
+
 
 p {
     color: #fff;
@@ -398,35 +422,73 @@ footer i:hover {
 
     /* INÍCIO GALLERY HOVER */
 
-.gallery {
+    .gallery {
 
-    width: auto;
-    height: 60vmin;
-    display: flex;
-    flex-direction: column;
+        height: 60vmin;
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    #computadores,
+    #infraestrutura,
+    #estudoremoto {
+
+        background-position: center;
+        position: relative;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+
+    /* INÍCIO GALLERY HOVER */
+
+    .gallery {
+
+        height: 80vmin;
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    #computadores,
+    #infraestrutura,
+    #estudoremoto {
  
-    gap: 10px;
+        background-position: bottom;
+        position: relative;
+    }
+
+
+    span h5 {
+        font-size: 18px;
+    }
+
+    span p {
+        font-size: 12px;
+    }
 
 }
 
 
-#computadores, #infraestrutura, #estudoremoto {
-    background-position: center;
-}
+@media only screen and (max-width: 400px) {
 
+    span h5 {
+        font-size: 12px;
+    }
 
-
-
-.back-texto {
-    background-color: rgba(255, 255, 255, 0.603);
-    height: auto;
-    text-align: center; 
-}
-
-
-
-
-
+    span p {
+        font-size: 10px;
+    }
 
 }
-
