@@ -116,7 +116,7 @@
             </div>
 
 
-            <div class="row mt-2">
+            <div class="row mt-2 mb-3">
 
                 <div class="col-sm-4 text-light  text-center"> &#10003 Imagem </div>
                 <div class="col-sm-4 text-light  text-center"> &#10003 Inclusão </div>
@@ -129,7 +129,7 @@
 
         </header>
 
-        
+
         <main class="main2">
 
 
@@ -137,135 +137,163 @@
 
             <form action="" class="">
 
-                <div class="row mt-5">
 
-                    <div class="col-12">
+                <div class="row">
 
+                    <div class="col-12 mt-4">
                         <p class="pFormulario">
                             Faça seu Cadastro Abaixo
                         </p>
+                        <p class="p2Formulario">Entraremos em contato através do e-mail cadastrado
+                        </p>
+                    </div>
+
+                </div>
 
 
-                        <p class="p2Formulario">Entraremos em contato através do e-mail cadastrado</p>
+                <!-- INÍCIO INPUTS -->
+                <div class="row ms-2 me-2">
+
+                    <div class="row">
+
+                        <div class="col-sm-6 mt-3">
+
+
+                            <label>Razão Social:</label> <br>
+                            <input type="text" placeholder="Digite a Razão Social da Empresa" required>
+
+
+                        </div>
+
+
+                        <div class="col-sm-6 mt-3">
+
+                            <label>CNPJ:</label> <br>
+                            <input type="text" name="cnpj" minlength="12" maxlength="20" id="cnpj"
+                                placeholder="Digite o CNPJ (Apenas Números)" required>
+
+
+                        </div>
 
                     </div>
 
-                    <div class="col-12 mt-4">
-                        <label>Razão Social</label> <br>
-                        <input type="text" placeholder="Digite a razão social" required>
-                    </div>
-
-                    <div class="col-12 mt-3">
-                        <label>CNPJ</label> <br>
-                        <input type="text" name="cnpj" minlength="12" maxlength="20" id="cnpj"
-                            placeholder="Digite o CNPJ (Apenas Números)" required>
-                    </div>
-
-                    <div class="col-12 mt-3">
-                        <label>Rua</label> <br>
-                        <input type="text" placeholder="Digite a rua" required>
-                    </div>
+                    <div class="row">
 
 
-                    <div class="col-12 mt-3">
-                        <label>Número</label> <br>
-                        <input type="text" placeholder="Digite o número" required>
-                    </div>
+                        <div class="col-sm-6 mt-3">
 
-                    <div class="col-12 mt-3">
-                        <label>Bairro</label> <br>
-                        <input type="text" placeholder="Digite o bairro" required>
-                    </div>
+                            <label>Cidade:</label>
+                            <input type="text" placeholder="Digite a Cidade" required>
+
+                        </div>
 
 
-                    <div class="col-12 mt-3">
-                        <label>Cep</label> <br>
-                        <input type="text" placeholder="Digite o cep">
-                    </div>
 
-                    <div class=" col-12 mt-3">
-                        <label>Cidade</label> <br>
-                        <input type="text" placeholder="Digite a Cidade" required>
-                    </div>
+                        <div class="col-sm-2 mt-3">
 
-                    <div class="col-12 mt-3">
+                            <label>Estado:</label>
 
-                        <label>Estado</label> <br>
+                            <select class="estados" name="estados" required>
 
-                        <select id="estado" name="estado" required class="estados">
-                            <option value="0">Escolha o estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
-                        </select>
-                    </div>
+                                <option value="0">UF</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                                <option value="EX">Estrangeiro</option>
 
-                    <div class="col-12 mt-3">
-                        <label>Telefone</label> <br>
-                        <input type="tel" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
-                    </div>
+                            </select>
 
-                    <div class="col-12 mt-3">
-                        <label>Responsável</label> <br>
-                        <input type="text" placeholder="Digite o nome do responsável" required>
-                    </div>
+                        </div>
 
-                    <div class="col-12 mt-4">
-                        <label>E-mail</label> <br>
-                        <input type="email" placeholder="Digite o e-mail">
-                    </div>
 
-                    <div class="col-12 mt-4">
-                        <label>Crie uma Senha</label> <br>
-                        <input type="password" placeholder="Crie uma senha de 10 digitos" maxlength="10" required>
-                    </div>
+                        <div class="col-sm-4 mt-3">
 
-                    <div class="col-12 mt-4">
-                        <label>Confirme a Senha</label> <br>
-                        <input type="password" placeholder="Confirme a senha digitada" maxlength="10" required>
+
+                            <label>CEP:</label>
+                            <input type="text" placeholder="Digite o Cep">
+
+
+                        </div>
+
+
+
                     </div>
 
 
-                    <div class="col-12 mt-3">
-                        <label>Os dados informados acima estão corretos?</label>
+                    <div class="row">
+
+                        <div class="col-sm-6 mt-3">
+
+                            <label>Telefone:</label> <br>
+                            <input type="tel" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
+
+                        </div>
+
+
+                        <div class="col-sm-6 mt-3">
+
+                            <label>E-mail Institucional:</label> <br>
+                            <input type="email" placeholder="Digite o E-mail">
+
+                        </div>
+
+
                     </div>
 
-                    <div class="col-12 mt-3">
-                        <input type="radio" name="opc" id="" value="Sim">
-                        <label for="Sim">Sim</label>
 
-                        <input type="radio" name="opc" id="" value="Não">
-                        <label for="nao">Não</label>
+                    <div class="row mt-3">
+
+                        <div class="col-sm-12">
+
+                            <label>Você confirma a autencidade dos dados informados acima?</label>
+                        </div>
+
+
+
+                        <div class="col-sm-12">
+
+                            <input type="checkbox" name="opc" id="" value="Sim">
+                            <label for="Sim">Sim</label>
+
+                    
+
+
+                        </div>
+
                     </div>
 
-                    <div class="col-12 mt-3 mb-3">
+
+                    <div class="col-12 mt-3 mb-4">
                         <input type="submit" value="Enviar">
                     </div>
+
+                </div>
+
+                <!-- FIM INPUTS -->
 
             </form>
 
