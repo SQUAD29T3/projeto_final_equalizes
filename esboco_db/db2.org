@@ -116,3 +116,15 @@
 | assunto_texto{text,pk}          |
 
 |---|
+
+
+# TODO: *pesquisar funcionamento de permissoes em dbs
+# *pensar sobrre assuntos e contato
+# *criar relacoes das entidades
+# *conferir com o site a necessidade de implementar mais alguma coisa
+# *planejar estoque de produtos e servicos
+# *organizacao de rede social/feed talvez seja mais facil
+# *funcionamento do turnos,9 ints um pra cada combinacao?talvez tenha outras formas
+# *como seria um pedidos em andamento,analisar ideia
+# *coolaboracao entre escolas
+# *newslleter?
