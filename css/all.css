@@ -138,6 +138,7 @@ body {
 /* INÍCIO MISSÃO */
 
 .missao {
+    
     background-color: #164B66;
     text-align: center;
     padding: 5%;
@@ -159,9 +160,37 @@ body {
 /* INÍCIO PROJETO */
 
 .projeto {
+
     background-color: #0C7EB3;
     text-align: center;
     padding: 5%;
+
+}
+
+
+section {
+    text-align: center;
+
+    position: relative;
+    
+}
+
+
+.texto-flutuante {
+    background-color: #ffffff28;
+    text-align: center;
+    
+    color: #ffffff;
+    font-size: 20px;
+    text-shadow: 2px 2px #164B66;    
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.projeto-mobile {
+    display: none;
 }
 
 
@@ -442,6 +471,22 @@ footer i:hover {
     }
 
 
+
+    /* TEXTO CENTRALIZADO - GOSTOU? ENTÃO VAMOS EQUALIZAR */
+
+
+.texto-flutuante {
+    display: none;
+}
+
+
+
+.projeto-mobile {
+    display: block;
+} 
+
+
+
 }
 
 
@@ -464,7 +509,7 @@ footer i:hover {
     #computadores,
     #infraestrutura,
     #estudoremoto {
- 
+
         background-position: bottom;
         position: relative;
     }
@@ -478,7 +523,12 @@ footer i:hover {
         font-size: 12px;
     }
 
+
+
+
+
 }
+
 
 
 @media only screen and (max-width: 400px) {

@@ -120,14 +120,14 @@ select:focus {
 
 /* INPUTs RADIO */
 
-input[type="radio"] {
+input[type="checkbox"] {
   width: 20px;
-  transition: all .3s;
+  transition: all .2s;
 }
 
 
-input[type="radio"]:checked {
-  transform: scale(1.5);
+input[type="checkbox"]:checked {
+  transform: rotateX(360deg);
 }
 
 input[type="submit"] {
