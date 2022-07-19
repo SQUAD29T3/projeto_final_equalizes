@@ -128,10 +128,6 @@ body {
 }
 
 
-
-
-
-
 /* FIM HEADER */
 
 
@@ -283,9 +279,6 @@ section {
 }
 
 
-
-
-
 #estudoremoto {
     background-image: url(../img/kid-tablet.jpg);
     background-size: cover;
@@ -366,6 +359,7 @@ p {
 /* FIM MAIN */
 
 
+
 /* INÍCIO NOSSAS CAUSAS */
 
 .nossas-causas {
@@ -395,12 +389,17 @@ p {
 
 
 footer {
-    height: auto;
-    color: #164B66;
+    height: auto;   
 }
 
+footer i, a {
+    text-decoration: none;
+    color: #0C7EB3;
+}
+
+
 footer i:hover {
-    height: auto;
+
     color: #ffffff;
     cursor: pointer;
 }
