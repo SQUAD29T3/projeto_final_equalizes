@@ -1,0 +1,97 @@
+#+title: Db3
+
+# Tabela do perfil
+# Relacionada e uma entidade de empresa ou de escola
+# perfil de admin/suporte tambem seria possivel
+# fk para outras tabelas importantes
+# tudo sera exposto numa area de perfil
+| perfil_equallize                        |
+|-----------------------------------------|
+| id_perfil{pk,int,autoincrease,not null} |
+| nome_perfil{varchar,not null,unique}    |
+| senha{varchar,not null}                 |
+| perfil_ativo{bool,not null}             |
+| data_criado{datetime,not null}          |
+| data_modificacao{datetime,null}         |
+| id_permissao{fk,not null,int}           |
+| id_empresa{fk,null,int}                 |
+| id_escola{fk,null,int}                  |
+| id_interreses                           |
+| id_projetos                             |
+
+# Representa uma entidade da empresa
+| empresa                                 |
+|-----------------------------------------|
+| id{pk,int,not null,incremetn}           |
+| cnpj{unique,int,not null}               |
+| nome_fantasia{varchar,not null}         |
+| atividade_empresarial{varchar,not null} |
+| razao_social{varchar}                   |
+| propietarix{varchar,not null}           |
+| socios{varchar,not null}                |
+| administrador{varchar,not null}         |
+| uf{char,not null}                       |
+| cep{int,not null}                       |
+| cidade{varchar,not null}                |
+| bairro{varchar,not null}                |
+| rua{varchar}                            |
+| numero{int}                             |
+| complemento{varchar}                    |
+| email{varchar,}                         |
+| telefone{int}                           |
+# Representa uma entidade da escola
+| escola                                |
+|---------------------------------------|
+| id{pk,not null,increment}             |
+| cnpj{unique,int,not null}             |
+| nome{varchar}                         |
+| turnos{varchar}                       |
+| qt_alunos{int}                        |
+| diretor_responsavel{varchar,not null} |
+| vice_diretor{varchar,not null}        |
+| coordenador{varchar}                  |
+| secretaria{varchar}                   |
+| uf{char}                              |
+| cep{int,not null}                     |
+| cidade{varchar}                       |
+| bairro{varchar}                       |
+| rua{varchar}                          |
+| numero{int}                           |
+| complemento{varchar}                  |
+| email{varchar}                        |
+| telefone{int}                         |
+# Onde sera possivel aos perfis colocarem vontades de projetos
+# A escola pode abrir um interesse de doacoes necessarias
+# A empresa pode abrir um interrese de doar mesas
+# etc
+# Uma  tabela de projeto deve  ser relacionada a interreses para ser valida
+| interesse                             |
+|---------------------------------------|
+| id{pk,int,not null,increment}         |
+| id_perfil{fk,not null,int}            |
+| interesse_texto{varchar}              |
+| interesse_imagem{caminho para imagem} |
+| data_criado                           |
+| data_alterado                         |
+# A tabela de projetos e onde serao mantidos as atividades
+# guardaremos informacoes do projeto para ser usado no marketing posterior
+# Um projeto tem que ressolver interreses da empresa ou da escola
+| projeto                        |
+|--------------------------------|
+| id{pk,int,not null,increment}  |
+| id_perfil{fk,int,not null}     |
+| id_escola{fk,int,not null}     |
+| id_empresa{fk,int,not null}    |
+| id_interrese{fk,int,not null}  |
+| data_criado{datetime,not null} |
+| data_entrega{datetime,null}    |
+| estado{varchar}                |
+# Onde guardamos as informacoes da area de contatos do site
+| Perguntas                             |
+|---------------------------------------|
+| id_contato{pk,int,not null,increment} |
+| nome{varchar,not null}                |
+| email{varchar,not null}               |
+| assunto_opcao{int}                    |
+| assunto_texto{varchar}                |
+| respondido{bool,not null}             |
