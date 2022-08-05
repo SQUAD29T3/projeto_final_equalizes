@@ -1,4 +1,3 @@
-
 h1 {
     color: #0C7EB3;
     text-align: center;
@@ -21,7 +20,7 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+
     width: 100%;
     height: 100%;
 
@@ -39,7 +38,7 @@ main {
     height: auto;
     background-color: #212529;
     color: #ffffff;
-    padding: 10px;
+    padding: 1rem;
     border-radius: 50%;
 }
 
@@ -47,12 +46,12 @@ main {
 /* DIV QUE ENVOLVE O ICON + PARÁGRAFO */
 .icon-informacao {
 
-    max-width: 250px;
+    max-width: 25rem;
     height: auto;
 
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 1rem;
 
 }
 
@@ -65,10 +64,10 @@ main {
     background-color: rgba(238, 247, 247, 0.178);
 
     color: #212529;
-    font-size: 16px;
+    font-size: 1.6rem;
 
     font-weight: bold;
-    margin-left: 5px;
+    margin-left: 0.5rem;
 
 }
 
@@ -91,19 +90,19 @@ select {
     width: 100%;
     color: #ffffff;
     font-weight: bold;
-    size: 14px;
-    padding: 5px;
+    size: 1.4rem;
+    padding: 0.5rem;
     border: none;
     outline: none;
 
 }
 
 option {
-font-family: monospace;
 
-
+    font-family: monospace;
 
 }
+
 
 optgroup {
     background-color: #212529;
@@ -121,7 +120,7 @@ textarea:focus,
 select:focus {
 
     width: 100%;
-    box-shadow: 0 0 2px 2px #164B66;
+    box-shadow: 0 0 0.2rem 0.2rem #164B66;
 
 }
 
@@ -132,7 +131,7 @@ input[type="submit"] {
     color: #ffffff;
     font-weight: bold;
     width: 100%;
-    padding: 5px 20px;
+    padding: 0.5rem 2rem;
     border: none;
     transition: all .2s;
 }
@@ -141,7 +140,7 @@ input[type="submit"]:hover {
     background-color: #ffffff;
     color: #164B66;
     font-weight: bold;
-    padding: 5px 20px;
+    padding: 0.5rem 2rem;
 
 
 }

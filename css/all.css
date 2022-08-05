@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -24,27 +20,36 @@ html {
 /* FIM SCROLLBAR */
 
 
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
 
 /* INÍCIO ICON DO SCROLL TOP */
 
 #icon-top {
     background-color: #3d4650;
     color: #ffffff;
-    width: 35px;
-    height: 35px;
+
+    padding: 0.5rem 1rem;
+    text-align: center;
+    
 
     border-radius: 50%;
-    box-shadow: 0 0 1px 1px #ffffff;
+    box-shadow: 0 0 0.1rem 0.1rem #ffffff;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+    display: none;
+
+    font-size: 2rem;
     font-weight: bold;
 
     position: fixed;
-    right: 10px;
-    bottom: 15px;
+    right: 1rem;
+    bottom: 2rem;
+
+    cursor: pointer;
 }
 
 #icon-top:hover {
@@ -58,13 +63,35 @@ html {
 body {
     background-color: #212529;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-size: 1.6rem;
+
 }
 
 /* INÍCIO MENU */
 
+.logo {
+    width: 21rem;
+    height: 2.9rem;
+}
+
+.dropdown-menu {
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.navbar-toggler {
+    width: 5.6rem;
+    height: 4rem;
+}
+
+span.navbar-toggler-icon {
+    width: 3rem;
+    height: 3rem;
+}
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 2px 2px #fff;
+    box-shadow: 0 0 0.2rem 0.2rem #fff;
 }
 
 .btn-login {
@@ -80,7 +107,7 @@ body {
 .float-right {
     position: absolute;
     display: inline-block;
-    right: 100px;
+    right: 10rem;
 }
 
 .btn-hover {
@@ -103,7 +130,7 @@ body {
     background-image: url(../img/header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 35rem;
 
     position: relative;
 
@@ -122,13 +149,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
     font-weight: bold;
 
 }
 
 
 /* FIM HEADER */
+
+
+#missao, #projeto {
+    width: 12rem;
+    height: 12rem;
+}
 
 
 /* INÍCIO MISSÃO */
@@ -177,8 +210,8 @@ section {
     text-align: center;
     
     color: #ffffff;
-    font-size: 20px;
-    text-shadow: 2px 2px #164B66;    
+    font-size: 2rem;
+    text-shadow: 0.2rem 0.2rem #164B66;    
     font-weight: bold;
     display: block;
     position: absolute;
@@ -204,18 +237,18 @@ section {
     height: 60vmin;
     display: flex;
 
-    gap: 10px;
+    gap: 1rem;
 
 }
 
 .gallery div {
-    box-shadow: 2px 2px 2px 1px #212529;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem #212529;
     height: 100%;
     flex: 1;
     object-fit: cover;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: all .3s;
 }
 
@@ -234,21 +267,32 @@ section {
 }
 
 
-.filtro1 {
-    background-color: #164b66ad;
+.filtro1, .filtro2, .filtro3 {
+
     width: 100%;
     height: 100%;
 
     position: absolute;
 
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
     font-weight: bold;
 
+}
+
+.filtro1 {
+    background-color: #164b66ad;
+}
+
+.filtro2 {
+    background-color: #fa759d7a;
+}
+
+.filtro3 {
+    background-color: #fdf38650;
 }
 
 
@@ -262,23 +306,6 @@ section {
 }
 
 
-.filtro2 {
-    background-color: #fa759d7a;
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-weight: bold;
-
-}
-
-
 #estudoremoto {
     background-image: url(../img/kid-tablet.jpg);
     background-size: cover;
@@ -288,23 +315,9 @@ section {
 
 }
 
-
-.filtro3 {
-    background-color: #fdf38650;
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-weight: bold;
-
+.filtro1 h5, .filtro2 h5, .filtro3  h5 {
+    font-size: 2rem;
 }
-
 
 .filtro1,
 .filtro2,
@@ -313,9 +326,8 @@ h1,
 h5 {
 
     color: #ffffff;
-    text-shadow: 4px 2px 5px #000000, 4px 2px 5px #fff, 4px 2px 5px #000000;
+    text-shadow: 0.4rem 0.2rem 0.5rem #000000, 0.4rem 0.2rem 0.5rem #fff, 0.4rem 0.2rem 0.5rem #000000;
 }
-
 
 
 /* FIMGALLERY HOVER */
@@ -329,7 +341,7 @@ main {
     background-color: #3d465038;
     color: #ffffff;
     height: auto;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 
@@ -339,70 +351,35 @@ p {
     text-align: justify;
 }
 
-.btn-saiba {
-    background-color: #3d465056;
-    border: 1px solid #fff;
-    color: #ffffff;
-    padding: 10px;
-    transition: all .2s;
-}
-
-.btn-saiba:hover {
-    background-color: #ff5f2e9d;
-    color: #ffffff;
-    border: 1px solid #fff;
-    padding: 10px;
-    transform: scale(1.02);
-
-}
 
 /* FIM MAIN */
 
 
 
-/* INÍCIO NOSSAS CAUSAS */
-
-.nossas-causas {
-    height: auto;
-    background-color: #ffffff;
-    color: #212529;
-    border-radius: 10px;
-    padding: 15px;
-    color: #212529;
-}
-
-.nossas-causas p {
-    color: #212529;
-}
-
-
-
-/* FIM NOSSAS CAUSAS */
-
-
-
-.parceiros {
-    height: 200px;
-    background-color: #ffffff;
-    color: #212529;
-}
-
+/* INÍCIO FOOTER */
 
 footer {
     height: auto;   
 }
 
+.icon-redeSociais {
+    font-size: 2.4rem;
+}
+
 footer i, a {
     text-decoration: none;
     color: #0C7EB3;
+    cursor: pointer;
 }
 
 
 footer i:hover {
 
     color: #ffffff;
-    cursor: pointer;
+
 }
+
+/* FIM FOOTER */
 
 
 @media only screen and (max-width: 992px) {
@@ -449,6 +426,10 @@ footer i:hover {
 
 @media only screen and (max-width: 768px) {
 
+    html {
+        font-size: 60%;
+    }
+
     /* INÍCIO GALLERY HOVER */
 
     .gallery {
@@ -456,8 +437,6 @@ footer i:hover {
         height: 60vmin;
         display: flex;
         flex-direction: column;
-
-        gap: 10px;
 
     }
 
@@ -493,6 +472,10 @@ footer i:hover {
 
 @media only screen and (max-width: 576px) {
 
+    html {
+        font-size: 55%;
+    }
+
     /* INÍCIO GALLERY HOVER */
 
     .gallery {
@@ -501,7 +484,6 @@ footer i:hover {
         display: flex;
         flex-direction: column;
 
-        gap: 10px;
 
     }
 
@@ -514,14 +496,14 @@ footer i:hover {
         position: relative;
     }
 
-
+/* 
     span h5 {
         font-size: 18px;
     }
 
     span p {
         font-size: 12px;
-    }
+    } */
 
 
 
@@ -533,12 +515,8 @@ footer i:hover {
 
 @media only screen and (max-width: 400px) {
 
-    span h5 {
-        font-size: 12px;
-    }
-
-    span p {
-        font-size: 10px;
+    html {
+        font-size: 40%;
     }
 
 }
