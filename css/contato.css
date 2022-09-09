@@ -14,62 +14,50 @@ main {
 }
 
 
+/* CARDS CONTATOS */
+
+.alinhamento-linha {
+    display: flex;
+    align-items: center;
+
+}
+
+
 .div-contatos {
 
-    background-image: url(../img/contato.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    width: 100%;
-    height: 100%;
+    background-color: #ffffff;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    opacity: 0.8;
+    align-items: center;
+    
+    padding: 2rem;
+    box-shadow: 0 0 1rem #212529;
+    
+
 
 }
 
+.div-contatos p {
+    margin-top: 2rem;
+    color: #212529;
+    font-weight: bolder;
+    
+}
 
 /* ICONES */
 .icon>i {
-    width: auto;
-    height: auto;
+
     background-color: #212529;
     color: #ffffff;
     padding: 1rem;
     border-radius: 50%;
-}
-
-
-/* DIV QUE ENVOLVE O ICON + PARÁGRAFO */
-.icon-informacao {
-
-    max-width: 25rem;
-    height: auto;
-
-    display: flex;
-    align-items: center;
-    padding: 1rem;
 
 }
 
+/* FIM CARDS CONTATOS */
 
-
-/* DESCRIÇÃO DOS CONTATOS -TELEFONE, EMAIL, ENDEREÇO */
-
-.descricao {
-
-    background-color: rgba(238, 247, 247, 0.178);
-
-    color: #212529;
-    font-size: 1.6rem;
-
-    font-weight: bold;
-    margin-left: 0.5rem;
-
-}
 
 
 /* INÍCIO FORMULÁRIO */
