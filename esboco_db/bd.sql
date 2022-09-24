@@ -1,98 +1,101 @@
-CREATE TABLE escola(
-id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-cnpj BIGINT NOT NULL UNIQUE,
-nome VARCHAR(100) NOT NULL,
-turnos VARCHAR(100),
-qt_alunos MEDIUMINT,
-diretor VARCHAR(100),
-vice_diretor VARCHAR(100),
-coordenador VARCHAR(100),
-secretaria VARCHAR(100),
-uf CHAR(2) NOT NULL,
-cep INT(8) NOT NULL,
-cidade VARCHAR(100),
-pbairro VARCHAR(100),
-rua VARCHAR(100),
-numero MEDIUMINT,
-complemento VARCHAR(100),
-email VARCHAR(100) NOT NULL UNIQUE,
-telefone BIGINT(11) NOT NULL UNIQUE
-);
+create table escola(
+    escola_id bigint unsigned auto_increment,
+    cnpj bigint not null unique,
+    nome varchar(100) not null,
+    turnos varchar(100),
+    qt_alunos mediumint,
+    diretor varchar(100),
+    vice_diretor varchar(100),
+    coordenador varchar(100),
+    secretaria varchar(100),
+    uf char(2) not null,
+    cep int(8) not null,
+    cidade varchar(100) not null,
+    bairro varchar(100),
+    rua varchar(100),
+    numero mediumint,
+    complemento varchar(100),
+    email varchar(100) not null unique,
+    telefone bigint(11) not null unique,
+    primary key(escola_id)
 
+) engine = innodb default character set = utf8;
 #conferir cadastro no site
-#setar melhor restricoes NOT NULL
-CREATE TABLE  empresa(
-id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-cpnj BIGINT(14) NOT NULL UNIQUE,
-nome_fantasia VARCHAR(100) NOT NULL,#null?
-razao_social VARCHAR(100) NOT NULL,#null?
-ativ_empresarial VARCHAR(100) NOT NULL,
-propieratio VARCHAR(100),
-socios VARCHAR(100),
-administrador VARCHAR(100),
-uf CHAR(2) NOT NULL,
-cep MEDIUMINT(8) NOT NULL,
-cidade VARCHAR(100),
-bairro VARCHAR(100),
-rua VARCHAR(100),
-numero MEDIUMINT,
-complemento VARCHAR(100),
-email VARCHAR(100) UNIQUE NOT NULL,
-telefone BIGINT(11) NOT NULL UNIQUE
-);
+#setar melhor restricoes not null
+create table empresa(
+    empresa_id bigint unsigned auto_increment,
+    cpnj bigint(14) unsigned  not null unique,
+    nome_fantasia varchar(100) not null,
+    #null?
+    razao_social varchar(100) not null,
+    #null?
+    ativ_empresarial varchar(100) not null,
+    propieratio varchar(100),
+    socios varchar(100),
+    administrador varchar(100),
+    uf char(2) not null,
+    cep mediumint(8) not null,
+    cidade varchar(100),
+    bairro varchar(100),
+    rua varchar(100),
+    numero mediumint unsigned,
+    complemento varchar(100),
+    email varchar(100) unique not null unique,
+    telefone bigint(11) unsigned not null unique,
+    primary key(empresa_id)
+)engine = innodb default character set = utf8;
+create table interese(
+    interese_id bigint unsigned  auto_increment,
+    id_perfil bigint unsigned,
+    texto varchar(250),
+    imagem varchar(300),
+    data_criado date not null,
+    data_mod date,
+    primary key(interese_id)
+)engine = innodb default character set = utf8;
+create table projeto(
+    projeto_id bigint unsigned auto_increment,
+    id_perfil bigint unsigned,
+    id_interese bigint unsigned,
+    data_criado date,
+    data_entrega date,
+    estado varchar(300),
+    primary key(projeto_id)
+)engine = innodb default character set = utf8;
+create or replace table pergunta(
+    pergunta_id bigint unsigned  auto_increment,
+    nome varchar(100) not null,
+    email varchar(100) not null unique,
+    assunto_ops int,
+    assunto_txt varchar(250),
+    respondido bit not null,
+    primary key(pergunta_id)
+)engine = innodb default character set = utf8;
+create table perfil(
+    perfil_id bigint unsigned  auto_increment,
+    email varchar(100) not null unique,
+    senha varchar(50) not null,
+    ativo bit not null,
+    data_criado date not null,
+    data_mod date,
+    id_permissao bigint unsigned,
+    id_empresa bigint unsigned,
+    id_escola bigint unsigned,
+    id_interese bigint unsigned,
+    id_projeto bigint unsigned,
+    primary key(perfil_id)
+)engine = innodb default character set = utf8;
 
-CREATE TABLE perfil (
-id BIGINT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(100) NOT NULL UNIQUE,
-senha VARCHAR(50) NOT NULL,
-ativo BIT NOT NULL,
-data_criado DATE NOT NULL,
-data_mod DATE,
-id_permissao BIGINT,
-id_empresa BIGINT,
-id_escola bigint,
-id_interese BIGINT,
-id_projeto BIGINT,
-CONSTRAINT `fk_empresa_perfil`
-    FOREIGN KEY (id) REFERENCES empresa (id),
-CONSTRAINT `fk_escola_perfil`
-    FOREIGN KEY (id) REFERENCES escola(id),
-CONSTRAINT `fk_interese_perfil`
-    FOREIGN KEY (id) REFERENCES interese (id),
-CONSTRAINT `fk_projeto_perfil`
-    FOREIGN KEY (id) REFERENCES projeto (id)
-);
+alter table perfil
+    add constraint `fk_empresa_perfil` foreign key (id_empresa) references empresa(empresa_id),
+    add constraint `fk_escola_perfil` foreign key (id_escola) references escola(escola_id),
+    add constraint `fk_interese_perfil` foreign key (id_interese) references interese(interese_id),
+    add constraint `fk_projeto_perfil` foreign key (id_projeto) references projeto(projeto_id);
 
-CREATE TABLE interese (
-id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-id_perfil BIGINT NOT NULL,
-texto VARCHAR(250),
-imagem VARCHAR(300),
-data_criado DATE NOT NULL,
-data_mod DATE,
-CONSTRAINT `fk_perfil_interese`
-    FOREIGN KEY (id) REFERENCES perfil (id)
-);
+alter table projeto
+    add constraint `fk_perfil_projeto` foreign key (id_perfil) references perfil(perfil_id),
+    add constraint `fk_interese_projeto` foreign key (id_interese) references interese(interese_id);
 
 
-CREATE TABLE projeto(
-id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-id_perfil BIGINT  NOT NULL,
-id_interese BIGINT NOT NULL,
-data_criado DATE NOT NULL,
-data_entrega DATE,
-estado VARCHAR(300),
-CONSTRAINT `fk_perfil_projeto`
-    FOREIGN KEY (id) REFERENCES perfil (id),
-CONSTRAINT `fk_interese_projeto`
-    FOREIGN KEY (id) REFERENCES interese (id)
-);
-
-CREATE OR REPLACE TABLE perguntas(
-id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(100) NOT NULL,
-email VARCHAR(100) NOT NULL UNIQUE,
-assunto_ops INT,
-assunto_txt VARCHAR(250),
-respondido BIT NOT NULL
-);
+alter table interese
+    add constraint `fk_perfil_interese` foreign key (id_perfil) references perfil(perfil_id);
