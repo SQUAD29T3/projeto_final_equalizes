@@ -22,6 +22,7 @@ create table escola(
 ) engine = innodb default character set = utf8;
 #conferir cadastro no site
 #setar melhor restricoes not null
+
 create table empresa(
     empresa_id bigint unsigned auto_increment,
     cpnj bigint(14) unsigned  not null unique,
@@ -30,7 +31,7 @@ create table empresa(
     razao_social varchar(100) not null,
     #null?
     ativ_empresarial varchar(100) not null,
-    propieratio varchar(100),
+    propietario varchar(100),
     socios varchar(100),
     administrador varchar(100),
     uf char(2) not null,
@@ -44,6 +45,7 @@ create table empresa(
     telefone bigint(11) unsigned not null unique,
     primary key(empresa_id)
 )engine = innodb default character set = utf8;
+
 create table interese(
     interese_id bigint unsigned  auto_increment,
     id_perfil bigint unsigned,
@@ -53,6 +55,7 @@ create table interese(
     data_mod date,
     primary key(interese_id)
 )engine = innodb default character set = utf8;
+
 create table projeto(
     projeto_id bigint unsigned auto_increment,
     id_perfil bigint unsigned,
@@ -62,7 +65,8 @@ create table projeto(
     estado varchar(300),
     primary key(projeto_id)
 )engine = innodb default character set = utf8;
-create or replace table pergunta(
+
+create table pergunta(
     pergunta_id bigint unsigned  auto_increment,
     nome varchar(100) not null,
     email varchar(100) not null unique,
@@ -71,6 +75,7 @@ create or replace table pergunta(
     respondido bit not null,
     primary key(pergunta_id)
 )engine = innodb default character set = utf8;
+
 create table perfil(
     perfil_id bigint unsigned  auto_increment,
     email varchar(100) not null unique,
