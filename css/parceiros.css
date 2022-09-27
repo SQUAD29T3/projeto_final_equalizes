@@ -120,18 +120,8 @@ input[type="checkbox"]:checked {
   transform: rotateX(360deg);
 }
 
-input[type="submit"] {
-  background-color: #0C7EB3;
-  color: #ffffff;
-  font-weight: bold;
+button {
   width: 100%;
-  padding: 0.5rem 2rem;
-  border: none;
-  transition: all .2s;
-}
-
-input[type="submit"]:hover {
-  background-color: #ffffff;
   color: #0C7EB3;
   font-weight: bold;
   padding: 0.5rem 2rem;

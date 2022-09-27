@@ -17,3 +17,19 @@ campoCep.addEventListener("blur", infoEvento => {
     })
 
 })
+
+// CONFIRMAÇÃO DA AUTENTICIDADE DOS DADOS - O BOTÃO DE ENVIAR SÓ É LIBERADO SE A OPÇÃO FOR MARCADA
+let sim = document.getElementById('sim');
+let btn = document.getElementById('botao');
+
+btn.disabled = true;
+
+sim.addEventListener("change", escolha);
+
+function escolha() {
+	if (document.querySelector("#sim").checked == true) {
+		btn.disabled = false;
+	} else {
+		btn.disabled = true;
+	}
+}
