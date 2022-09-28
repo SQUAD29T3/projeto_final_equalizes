@@ -1,3 +1,17 @@
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #164B66;
+    border-radius: 20px;
+}
+
+/* FIM SCROLLBAR */
+
 /* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
@@ -57,6 +71,7 @@ a:hover {
 
 }
 
+
 /* MENU */
 
 .tipoPerfil {
@@ -75,6 +90,7 @@ a:hover {
 }
 
 nav {
+    height: 90vh;
     background-color: var(--azul);
     padding: 0 !important;
 
@@ -101,7 +117,6 @@ li a:hover {
 }
 
 main {
-    height: fit-content;
     background-color: #fff;
 
 }
@@ -116,12 +131,15 @@ input {
     padding: 0.5rem;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 600px) {
 
     html {
         font-size: 55%;
     }
 
+    nav {
+        height: fit-content;
+    }
 
     main {
         height: auto !important;

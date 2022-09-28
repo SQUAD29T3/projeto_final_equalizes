@@ -7,6 +7,14 @@
 
 }
 
+.img {
+    border-radius: 40%;
+    filter: drop-shadow(0rem 0rem 5rem #000);
+}
+
+.empresa, .escola {
+    display: none;
+}
 
 form {
     width: 100%;

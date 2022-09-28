@@ -108,7 +108,10 @@
 
                 <div class="col-md-6 d-flex align-items-center justify-content-center">
 
-                    <img class="img-fluid" src="../img/login.png" alt="login">
+                    <img class="img-fluid p-5 img img-padrao" src="../img/login.png" alt="Imagem Empresa">
+
+                    <img class="img-fluid p-5 img empresa" src="../img/empresaLogin.jpg" alt="Imagem Empresa">
+                    <img class="img-fluid p-5 img escola" src="../img/escolaLogin.jpg" alt="Imagem Escola">
 
                 </div>
 
@@ -117,6 +120,8 @@
                 <!-- INÍCIO FORM -->
                 <div class="col-md-6 text-center d-flex align-items-center">
 
+
+                    
                     <form class="mt-2" action="">
 
 
@@ -131,9 +136,9 @@
 
                         <div class="col-md-12 mt-3 mb-2 text-center">
 
-                            <input type="radio" name="parceria" id="escolas"> <label for=""> Escolas </label>
+                            <input type="radio" name="opc" value="escola" id="escolas" /> <label for="escolas"> Escolas </label>
 
-                            <input type="radio" name="parceria" id="parc_empresas"> <label for=""> Empresas </label>
+                            <input type="radio" name="opc" value="empresa" id="empresas" /> <label for="empresas"> Empresas </label>
 
                         </div>
 
@@ -165,6 +170,12 @@
 
 
                     </form>
+
+
+
+
+
+
 
                 </div>
 
@@ -243,6 +254,8 @@
 
     <!-- JAVASCRIPT EXTERNO -->
     <script src="../js/all.js"></script>
+
+    <script src="../js/login.js"></script>
 
 
     <!-- BOOTSTRAP JS -->
