@@ -27,12 +27,9 @@ h2 {
 
 /* LABEL PARCEIROS */
 
-.parceiros {
-    background-color: transparent;
-    width: 100%;
-    height: auto;
-    color: #ffffff;
-    font-weight: bold;
+p.parceiros {
+
+    text-align: center;
 }
 
 
@@ -45,7 +42,7 @@ input[type="radio"] {
 
 
 input[type="radio"]:checked {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 
