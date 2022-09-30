@@ -4,11 +4,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.System.Logger;
-import java.lang.System.Logger.Level;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Objects;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.sql.DataSource;
 
@@ -20,7 +21,7 @@ public class DataSourceFactory {
 
 	DataSourceFactory() {
 		final MariaDbDataSource daso = new MariaDbDataSource();
-		final String rootpath = Object
+		final String rootpath = Objects
 				.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("database.properties"))
 				.getPath();
 
@@ -29,12 +30,26 @@ public class DataSourceFactory {
 		try {
 			input = new FileInputStream(rootpath);
 			final Properties props = new Properties();
-			props.load(input);
-			daso.setDatabaseName(props.getProperty("database"));
-			daso.setServerName(props.getProperty("serverName"));
-			daso.setPort(Integer.parseInt(props.getProperty("port")));
-			daso.setUser(props.getProperty("user"));
-			daso.setPassword(props.getProperty("password"));
+			try {
+				props.load(input);
+			} catch (final IOException e) {
+				e.printStackTrace();
+			}
+			try {
+				daso.setUrl("mariadb://localhost:3306/java");
+			} catch (final SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				daso.setUser(props.getProperty("user"));
+			} catch (final SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				daso.setPassword(props.getProperty("password"));
+			} catch (final SQLException e) {
+				e.printStackTrace();
+			}
 		} catch (final FileNotFoundException e) {
 			LOGGER.log(Level.SEVERE, "file database properties not found", e);
 		} finally {
