@@ -105,6 +105,12 @@
                 <h2>Página inicial</h2>
 
                 <p class="text-center text-danger">Utilize os menus para navegar pelo perfil.</p>
+                
+                                <div class="row text-center mt-5">
+                    <div class="col-md-12">
+                        <img src="../img/escolaLogin.jpg" alt="Perfil Escola">
+                    </div>
+                </div>
 
             </main>
 

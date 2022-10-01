@@ -71,17 +71,17 @@
                     <li>
                         <a href="#">
                             <span class="material-symbols-outlined">
-                                edit
-                            </span> FAZER PEDIDO
+                                sync_alt
+                            </span> PEDIDOS
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#">
                             <span class="material-symbols-outlined">
                                 select_check_box
                             </span> PEDIDOS CONCLUÍDOS
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="#">
                             <span class="material-symbols-outlined">
