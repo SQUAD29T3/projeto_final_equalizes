@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+
     <!-- ICON DO SITE (E) -->
     <link rel="shortcut icon" href="../img/icon.jpg" type="image/x-icon">
 
@@ -23,11 +24,11 @@
     <link rel="stylesheet" href="../css/perfil.css">
 
 
-    <title>Informações cadastrais</title>
+    <title>Informações Cadastrais</title>
 </head>
 <body>
 
-    <div class="container-fluid">
+<div class="container-fluid">
 
         <!-- HEADER -->
         <header>
@@ -45,10 +46,11 @@
         <!-- FIM HEADER -->
 
 
-        <!-- INÍCIO MENU -->
         <div class="row linha2">
 
+            <!-- INÍCIO MENU -->
             <nav class="col-md-3 escola">
+
 
                 <p class="perfilEscola">
                     <span class="material-symbols-outlined ">
@@ -56,8 +58,6 @@
                     </span>
                     PERFIL INSTITUIÇÃO DE ENSINO
                 </p>
-
-
 
                 <ul>
                     <li>
@@ -68,17 +68,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="fazer-pedido.jsp">
                             <span class="material-symbols-outlined">
                                 edit
                             </span> FAZER PEDIDO
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="andamento-pedidos.jsp">
                             <span class="material-symbols-outlined">
-                                select_check_box
-                            </span> PEDIDOS CONCLUÍDOS
+                                query_stats
+                            </span> ANDAMENTO DE PEDIDOS
                         </a>
                     </li>
                     <li>
@@ -89,7 +89,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="configuracoes-escola.jsp">
                             <span class="material-symbols-outlined">
                                 settings
                             </span> CONFIGURAÇÕES
@@ -99,7 +99,7 @@
             </nav>
             <!-- FIM MENU -->
 
-            <main class="col-md-9">
+<main class="col-md-9">
 
                 <h2>INFORMAÇÕES CADASTRAIS</h2>
 
@@ -113,12 +113,12 @@
 
                         <div class="col-md-4 mt-3">
                             <label for="nome">Nome da IE:</label> <br />
-                            <input type="text" name="nome" maxlength="100" />
+                            <input type="text" name="nome" maxlength="100" disabled />
                         </div>
 
                         <div class="col-md-4 mt-3">
                             <label for="cnpj">Cnpj:</label> <br />
-                            <input type="text" name="cnpj" maxlength="14" />
+                            <input type="text" name="cnpj" maxlength="14" disabled />
                         </div>
 
                         <div class="col-md-2 mt-3">
@@ -162,7 +162,7 @@
 
                         <div class="col-md-4 mt-3">
                             <label for="email">Email:</label>
-                            <input type="text" name="email" />
+                            <input type="text" name="email" disabled />
                         </div>
 
                         <div class="col-md-4 mt-3">
@@ -238,6 +238,7 @@
 
 
     </div>
+
 
 </body>
 </html>

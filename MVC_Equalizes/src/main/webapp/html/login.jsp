@@ -66,12 +66,12 @@
                                         PARCEIRO</a>
                                     <div class="dropdown-menu" aria-labelledby="dropdownId">
                                         <a class="dropdown-item text-center btn-hover"
-                                            href="parceiros-escolas.html">ESCOLAS</a>
+                                            href="parceiros-escolas.jsp">ESCOLAS</a>
 
                                         <hr class="dropdown-divider">
 
                                         <a class="dropdown-item text-center btn-hover"
-                                            href="parceiros-empresas.html">EMPRESAS</a>
+                                            href="parceiros-empresas.jsp">EMPRESAS</a>
                                     </div>
                                 </li>
 

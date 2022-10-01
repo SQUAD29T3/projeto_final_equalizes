@@ -175,6 +175,19 @@ input:focus {
     border: 0.2rem solid var(--azul);
 }
 
+
+/* PEDIDOS - PÁG PERFIL EMPRESAS */
+
+table {
+    width: 100%;
+}
+
+table, tr, td, th {
+    border: 0.1rem solid var(--azul);
+    padding: 0.1rem;
+}
+
+
 @media only screen and (max-width: 768px) {
 
     html {

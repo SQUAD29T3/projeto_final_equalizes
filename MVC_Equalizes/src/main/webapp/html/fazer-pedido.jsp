@@ -1,14 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="ISO-8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
     <!-- ICON DO SITE (E) -->
     <link rel="shortcut icon" href="../img/icon.jpg" type="image/x-icon">
@@ -22,12 +24,11 @@
     <link rel="stylesheet" href="../css/perfil.css">
 
 
-    <title>Perfil</title>
+    <title>Fazer pedido</title>
 </head>
-
 <body>
 
-    <div class="container-fluid">
+ <div class="container-fluid">
 
         <!-- HEADER -->
         <header>
@@ -45,56 +46,53 @@
         <!-- FIM HEADER -->
 
 
-        <!-- IN√çCIO MENU -->
         <div class="row linha2">
 
-            <!-- IN√çCIO MENU -->
-            <nav class="col-md-3 empresa">
+            <!-- INÕCIO MENU -->
+            <nav class="col-md-3 escola">
 
 
-                <p class="perfilEmpresa">
-                    <span class="material-symbols-outlined">
-                        apartment
+                <p class="perfilEscola">
+                    <span class="material-symbols-outlined ">
+                        school
                     </span>
-                    PERFIL EMPRESA
+                    PERFIL INSTITUI«√O DE ENSINO
                 </p>
-
-
 
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="perfil-escola.jsp">
                             <span class="material-symbols-outlined">
                                 home
-                            </span> IN√çCIO
+                            </span> INÕCIO
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="fazer-pedido.jsp">
                             <span class="material-symbols-outlined">
-                                sync_alt
-                            </span> PEDIDOS
+                                edit
+                            </span> FAZER PEDIDO
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="#">
-                            <span class="material-symbols-outlined">
-                                select_check_box
-                            </span> PEDIDOS CONCLU√çDOS
-                        </a>
-                    </li> -->
                     <li>
-                        <a href="info-cadastrais-empresa.html">
+                        <a href="andamento-pedidos.jsp">
+                            <span class="material-symbols-outlined">
+                                query_stats
+                            </span> ANDAMENTO DE PEDIDOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info-cadastrais-escola.jsp">
                             <span class="material-symbols-outlined">
                                 info
                             </span> INFO. CADASTRAIS
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="configuracoes-escola.jsp">
                             <span class="material-symbols-outlined">
                                 settings
-                            </span> CONFIGURA√á√ïES
+                            </span> CONFIGURA«’ES
                         </a>
                     </li>
                 </ul>
@@ -103,13 +101,22 @@
 
             <main class="col-md-9">
 
-                <h2>P√°gina inicial</h2>
+                <h2>FAZER PEDIDO</h2>
 
-                <p class="text-center text-danger">Utilize os menus para navegar pelo perfil.</p>
+                <p class="text-center text-danger">Utilize o formul·rio abaixo para realizar pedidos.</p>
 
                 <div class="row text-center mt-5">
                     <div class="col-md-12">
-                        <img src="../img/empresaLogin.jpg" alt="Perfil Empresa">
+
+                        <form action="" method="">
+
+                       <input type="text" name="descricao" id="" placeholder="Descreva o pedido aqui" />
+
+
+                            <input class="mt-3" type="submit" value="Solicitar">
+                        </form>
+
+
                     </div>
                 </div>
 
@@ -120,6 +127,6 @@
 
     </div>
 
-</body>
 
+</body>
 </html>

@@ -3,6 +3,8 @@
 const campoCep = document.querySelector('[name="cep"]');
 const estado = document.querySelector('[name="estado"]');
 const cidade = document.querySelector('[name="cidade"]');
+const bairro = document.querySelector('[name="bairro"]');
+const rua = document.querySelector('[name="rua"]');
 
 campoCep.addEventListener("blur", infoEvento => {
     const cep = infoEvento.target.value;
@@ -14,9 +16,12 @@ campoCep.addEventListener("blur", infoEvento => {
         console.log(dadosCep);
         estado.value = dadosCep.uf;
         cidade.value = dadosCep.localidade;
+        bairro.value = dadosCep.bairro;
+        rua.value = dadosCep.logradouro;
     })
 
 })
+
 
 // CONFIRMAÇÃO DA AUTENTICIDADE DOS DADOS - O BOTÃO DE ENVIAR SÓ É LIBERADO SE A OPÇÃO FOR MARCADA
 let sim = document.getElementById('sim');

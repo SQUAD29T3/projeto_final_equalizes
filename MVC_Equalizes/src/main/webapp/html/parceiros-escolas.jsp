@@ -1,9 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="ISO-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- BOOTSTRAP CSS -->
@@ -23,15 +24,12 @@
 
 
     <title> Escolas parceiras | Equalizes </title>
-
 </head>
-
 <body>
 
+  <div class="container-fluid">
 
-    <div class="container-fluid">
-
-        <!-- INÃCIO MENU -->
+        <!-- INÍCIO MENU -->
 
         <div class="row">
 
@@ -56,7 +54,7 @@
                                             class="visually-hidden">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light btn-hover" href="../index.html">MISSÃƒO</a>
+                                    <a class="nav-link text-light btn-hover" href="../index.html">MISSÃO</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link text-light btn-hover" href="../index.html"> PROJETO </a>
@@ -72,7 +70,7 @@
                                         <hr class="dropdown-divider">
 
                                         <a class="dropdown-item text-center btn-hover"
-                                            href="parceiros-empresas.html">EMPRESAS</a>
+                                            href="parceiros-empresas.jsp">EMPRESAS</a>
                                     </div>
                                 </li>
 
@@ -80,7 +78,7 @@
                                     <a class="nav-link text-light btn-hover" href="contato.html"> CONTATO </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link text-light btn-login float-right" href="login.html"> LOGIN </a>
+                                    <a class="nav-link text-light btn-login float-right" href="login.jsp"> LOGIN </a>
                                 </li>
 
                             </ul>
@@ -101,7 +99,7 @@
             <div class="jumbotron">
                 <div class="container-fluid">
                     <h1 class="display-5">SEJA UMA ESCOLA PARCEIRA DO PROJETO EQUALIZES</h1>
-                    <p class="text-center">Venha conosco nessa jornada para assegurar educaÃ§Ã£o inclusiva,
+                    <p class="text-center">Venha conosco nessa jornada para assegurar educação inclusiva,
                         equitativa e de qualidade para todos!
                     </p>
                 </div>
@@ -112,7 +110,7 @@
             <div class="row">
 
                 <div class="col-sm-4 text-light  text-center"> &#10003 Aprender </div>
-                <div class="col-sm-4 text-light  text-center"> &#10003 EvoluÃ§Ã£o </div>
+                <div class="col-sm-4 text-light  text-center"> &#10003 Evolução </div>
                 <div class="col-sm-4 text-light text-center"> &#10003 Futuro </div>
 
             </div>
@@ -120,8 +118,8 @@
 
             <div class="row mt-2 mb-3">
 
-                <div class="col-sm-4 text-light  text-center"> &#10003 InformaÃ§Ã£o </div>
-                <div class="col-sm-4 text-light  text-center"> &#10003 QualificaÃ§Ã£o </div>
+                <div class="col-sm-4 text-light  text-center"> &#10003 Informação </div>
+                <div class="col-sm-4 text-light  text-center"> &#10003 Qualificação </div>
                 <div class="col-sm-4 text-light text-center"> &#10003 Sonhar </div>
 
             </div>
@@ -144,16 +142,16 @@
 
                     <div class="col-12 mt-4">
                         <p class="pFormulario">
-                            FaÃ§a seu Cadastro Abaixo
+                            Faça seu Cadastro Abaixo
                         </p>
-                        <p class="p2Formulario">Entraremos em contato atravÃ©s do e-mail cadastrado
+                        <p class="p2Formulario">Entraremos em contato através do e-mail cadastrado
                         </p>
                     </div>
 
                 </div>
 
 
-                <!-- INÃCIO INPUTS -->
+                <!-- INÍCIO INPUTS -->
                 <div class="row ms-2 me-2">
 
                     <div class="row m-0">
@@ -171,7 +169,7 @@
 
                             <label>CNPJ:</label> <br>
                             <input type="text" name="cnpj" maxlength="14" id="cnpj"
-                                placeholder="Digite o CNPJ (Apenas NÃºmeros)" required>
+                                placeholder="Digite o CNPJ (Apenas Números)" required>
 
 
                         </div>
@@ -180,8 +178,27 @@
 
                     <div class="row m-0">
 
+                        <div class="col-md-6 mt-3">
+                            <label for="rua">Rua:</label>
+                            <input type="text" name="rua" disabled />
+                        </div>
 
-                        <div class="col-sm-6 mt-3">
+                        <div class="col-md-2 mt-3">
+                            <label for="numero">Nº:</label>
+                            <input type="text" name="numero" maxlength="6" />
+                        </div>
+
+                        <div class="col-md-4 mt-3">
+                            <label for="complemento">Complemento:</label>
+                            <input type="text" name="complemento" maxlength="50" />
+                        </div>
+
+                        <div class="col-md-6 mt-3">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" name="bairro" disabled />
+                        </div>
+
+                        <div class="col-md-6 mt-3">
 
                             <label>Cidade:</label>
                             <input type="text" name="cidade" disabled>
@@ -190,7 +207,7 @@
 
 
 
-                        <div class="col-sm-2 mt-3">
+                        <div class="col-md-6 mt-3">
 
                             <label>Estado:</label>
 
@@ -199,7 +216,7 @@
                         </div>
 
 
-                        <div class="col-sm-4 mt-3">
+                        <div class="col-md-6 mt-3">
 
                             <label>CEP:</label>
                             <input type="text" maxlength="8" name="cep" placeholder="Digite o Cep">
@@ -236,7 +253,7 @@
                     <div class="row m-0">
 
                         <div class="col-sm-12 mt-3">
-                            <label>VocÃª confirma a autencidade dos dados informados acima?</label>
+                            <label>Você confirma a autencidade dos dados informados acima?</label>
                         </div>
 
                         <div class="col-sm-12">
@@ -272,7 +289,7 @@
 
 
 
-        <!-- RODAPÃ‰ -->
+        <!-- RODAPÉ -->
 
         <footer>
 
@@ -323,7 +340,7 @@
 
         </footer>
 
-        <!-- FIM RODAPÃ‰ -->
+        <!-- FIM RODAPÉ -->
 
 
 
@@ -340,6 +357,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-</body>
 
+</body>
 </html>
