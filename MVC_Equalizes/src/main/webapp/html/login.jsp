@@ -120,7 +120,7 @@
 
 
                     
-                    <form class="mt-2" action="">
+                    <form class="mt-2" action="" method="">
 
 
                         <div class="col-12 text-center">
@@ -170,11 +170,6 @@
                     </form>
 
 
-
-
-
-
-
                 </div>
 
                 <!-- FIM FORM -->
@@ -220,11 +215,6 @@
 
                         <a href="https://github.com/SQUAD29T3" target="_blank"> <i class="ri-github-fill"></i></a>
 
-
-                        <!-- <a href="#"> <i class="ri-linkedin-box-fill ri-1x"></i></a>
-                        <a href="#"> <i class="ri-instagram-fill ri-1x"></i></a>
-                        <a href="#"> <i class="ri-facebook-box-fill ri-1x"></i></a>
-                        <a href="#"> <i class="ri-twitter-fill ri-1x"></i></a> -->
 
                     </div>
 

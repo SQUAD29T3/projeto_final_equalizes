@@ -133,7 +133,7 @@
 
             <!-- Inicio Formulario -->
 
-            <form action="">
+            <form action="" method="">
 
 
                 <div class="row m-0">
@@ -158,7 +158,7 @@
 
 
                             <label>Razão Social:</label> <br>
-                            <input type="text" placeholder="Digite a Razão Social da Empresa" required>
+                            <input type="text" name="razaoSocial" placeholder="Digite a Razão Social da Empresa" required>
 
 
                         </div>
@@ -234,7 +234,7 @@
                         <div class="col-sm-6 mt-3">
 
                             <label>Telefone:</label> <br>
-                            <input type="tel" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
+                            <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
 
                         </div>
 
@@ -242,7 +242,7 @@
                         <div class="col-sm-6 mt-3">
 
                             <label>E-mail Institucional:</label> <br>
-                            <input type="email" placeholder="Digite o E-mail">
+                            <input type="email" name="email" placeholder="Digite o E-mail">
 
                         </div>
 
@@ -263,9 +263,6 @@
 
                             <input type="checkbox" id="sim" name="opc" value="sim">
                             <label for="sim">Sim</label>
-
-
-
 
                         </div>
 
@@ -322,11 +319,6 @@
 
                         <a href="https://github.com/SQUAD29T3" target="_blank"> <i class="ri-github-fill"></i></a>
 
-
-                        <!-- <a href="#"> <i class="ri-linkedin-box-fill ri-1x"></i></a>
-                        <a href="#"> <i class="ri-instagram-fill ri-1x"></i></a>
-                        <a href="#"> <i class="ri-facebook-box-fill ri-1x"></i></a>
-                        <a href="#"> <i class="ri-twitter-fill ri-1x"></i></a> -->
 
                     </div>
 

@@ -164,6 +164,6 @@
 
     </div>
 
-
+<script src="../js/excluirConta.js"></script>
 </body>
 </html>
