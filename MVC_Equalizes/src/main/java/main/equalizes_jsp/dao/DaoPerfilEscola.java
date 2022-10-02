@@ -74,7 +74,7 @@ public class DaoPerfilEscola implements PerfilEscolaDao {
 	}
 
 	@Override
-	public boolean delete(PerfilEscola perfilEscola) throws SQLExcpetion {
+	public boolean delete(PerfilEscola perfilEscola) throws SQLException {
 		String sql = "DELETE from perfil where perfil_id = ?";
 		boolean rowDeleted = false;
 
