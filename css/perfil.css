@@ -187,6 +187,10 @@ table, tr, td, th {
     padding: 0.1rem;
 }
 
+.aberto, .novos, .andamento, .concluidos {
+    display: none;
+}
+
 
 @media only screen and (max-width: 768px) {
 

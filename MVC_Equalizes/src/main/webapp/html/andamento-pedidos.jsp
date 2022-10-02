@@ -79,111 +79,111 @@
 			</nav>
 			<!-- FIM MENU -->
 
-			<main class="col-md-9">
+          <main class="col-md-9">
 
-				<h2>ANDAMENTO DE PEDIDOS</h2>
+                <h2>ANDAMENTO DE PEDIDOS</h2>
 
-				<div class="row text-center mt-5">
-					<h3>SELECIONE O STATUS DO PEDIDO PARA VERIFICAR:</h3>
+                <div class="row text-center mt-5">
+                    <h3>SELECIONE O STATUS DO PEDIDO PARA VERIFICAR:</h3>
 
-					<form class="mt-2" action="" method="">
+                    <form class="mt-2" action="" method="">
 
-						<select name="status" id="status" class="p-2">
-							<option value="escolha" disabled selected>Escolha:</option>
-							<option value="aberto">Em aberto</option>
-							<option value="andamento">Em andamento</option>
-							<option value="concluido">Concluídos</option>
-							<option value="todos">Listar todos</option>
-						</select>
+                        <select name="status" id="status" class="p-2" onchange="listar()">
+                            <option value="escolha" disabled selected> Escolha: </option>
+                            <option value="aberto">Em aberto</option>
+                            <option value="andamento">Em andamento</option>
+                            <option value="concluidos">Concluídos</option>
+                            <option value="todos">Listar todos</option>
+                        </select>
 
-					</form>
+                    </form>
 
-					<div class="col-md-12 mt-5">
+                    <div class="col-md-12 mt-5 aberto">
+                        
+                        <h4 class="bg-dark text-light p-2">Em aberto</h4>
 
-						<h4 class="bg-dark text-light p-2">Em aberto</h4>
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>DESCRIÇÃO</th>
+                                <th>DATA DO PEDIDO</th>
+                                <th>STATUS</th>
+                            </tr>
 
-						<table>
-							<tr>
-								<th>ID</th>
-								<th>DESCRIÇÃO</th>
-								<th>DATA DO PEDIDO</th>
-								<th>STATUS</th>
-							</tr>
+                            <tr>
+                                <td>000</td>
+                                <td>5 Tablets</td>
+                                <td>00/00/0000</td>
+                                <td>Em aberto</td>
+                            </tr>
+                        </table>
 
-							<tr>
-								<td>000</td>
-								<td>caderno</td>
-								<td>00/00/0000</td>
-								<td>Em aberto</td>
-							</tr>
-						</table>
+                    </div>
 
-					</div>
+                    <div class="col-md-12 mt-5 andamento">
+                        
+                        <h4 class="bg-warning p-2">Em andamento</h4>
 
-					<div class="col-md-12 mt-5">
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>EMPRESA PROVEDORA</th>
+                                <th>DESCRIÇÃO</th>
+                                <th>DATA DO PEDIDO</th>
+                                <th>DATA DE ATENDIMENTO</th>
+                                <th>STATUS</th>
+                            </tr>
 
-						<h4 class="bg-warning p-2">Em andamento</h4>
+                            <tr>
+                                <td>000</td>
+                                <th>X</th>
+                                <td>5 Tablets</td>
+                                <td>00/00/0000</td>
+                                <td>00/00/0000</td>
+                                <td>Em andamento</td>
+                            </tr>
+                        </table>
 
-						<table>
-							<tr>
-								<th>ID</th>
-								<th>EMPRESA PROVEDORA</th>
-								<th>DESCRIÇÃO</th>
-								<th>DATA DO PEDIDO</th>
-								<th>DATA DE ATENDIMENTO</th>
-								<th>STATUS</th>
-							</tr>
-
-							<tr>
-								<td>000</td>
-								<th>X</th>
-								<td>caderno</td>
-								<td>00/00/0000</td>
-								<td>00/00/0000</td>
-								<td>Em andamento</td>
-							</tr>
-						</table>
-
-					</div>
-
-
-
-					<div class="col-md-12 mt-5">
-
-						<h4 class="bg-success text-light p-2">Concluídos</h4>
-
-						<table>
-							<tr>
-								<th>ID</th>
-								<th>EMPRESA PROVEDORA</th>
-								<th>DESCRIÇÃO</th>
-								<th>DATA DO PEDIDO</th>
-								<th>DATA DE CONCLUSÃO</th>
-								<th>STATUS</th>
-							</tr>
-
-							<tr>
-								<td>000</td>
-								<th>X</th>
-								<td>caderno</td>
-								<td>00/00/0000</td>
-								<td>00/00/0000</td>
-								<td>concluído</td>
-							</tr>
-						</table>
-
-					</div>
+                    </div>
 
 
-				</div>
 
-			</main>
+                    <div class="col-md-12 mt-5 concluidos">
+                        
+                        <h4 class="bg-success text-light p-2">Concluídos</h4>
+
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>EMPRESA PROVEDORA</th>
+                                <th>DESCRIÇÃO</th>
+                                <th>DATA DO PEDIDO</th>
+                                <th>DATA DE CONCLUSÃO</th>
+                                <th>STATUS</th>
+                            </tr>
+
+                            <tr>
+                                <td>000</td>
+                                <th>X</th>
+                                <td>5 Tablets</td>
+                                <td>00/00/0000</td>
+                                <td>00/00/0000</td>
+                                <td>concluído</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+
+                </div>
+
+            </main>
 
 		</div>
 
 
 	</div>
 
-
+<script src="../js/pedidos.js"></script>
 </body>
 </html>
