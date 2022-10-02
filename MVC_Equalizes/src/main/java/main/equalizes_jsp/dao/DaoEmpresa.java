@@ -58,40 +58,44 @@ public class DaoEmpresa implements EmpresaDao {
 				socios, administrador, uf, cep, cidade, bairro, rua, numero, complemento, email, telefone));
 	}
 
-	@Override
-	public List<Empresa> findAll() throws SQLException {
-		List<Empresa> listEmpresas = new ArrayList<>();
-		String sql = "SELECT empresa_id,cnpj,nome_fantasia,razao_social,ativ_empresarial,propietario,socios,administrador,uf,cep,cidade,bairro,rua,numero,complemento,email,telefone from empresa";
+	// @Override
+	// public List<Empresa> findAll() throws SQLException {
+	// List<Empresa> listEmpresas = new ArrayList<>();
+	// String sql = "SELECT
+	// empresa_id,cnpj,nome_fantasia,razao_social,ativ_empresarial,propietario,socios,administrador,uf,cep,cidade,bairro,rua,numero,complemento,email,telefone
+	// from empresa";
 
-		Connection conn = DataSourceFactory.getConnection();
-		java.sql.Statement statement = conn.createStatement();
-		ResultSet rs = statement.executeQuery(sql);
+	// Connection conn = DataSourceFactory.getConnection();
+	// java.sql.Statement statement = conn.createStatement();
+	// ResultSet rs = statement.executeQuery(sql);
 
-		while (rs.next()) {
-			long id_empresa = rs.getLong("id_empresa");
-			long telefone = rs.getLong("telefone");
-			long cnpj = rs.getLong("cnpj");
-			long cep = rs.getLong("cep");
-			int numero = rs.getInt("numero");
-			String nome_fantasia = rs.getString("nome_fantasia");
-			String razao_social = rs.getString("razao_social");
-			String ativ_empresarial = rs.getString("ativ_empresarial");
-			String propietario = rs.getString("propietario");
-			String socios = rs.getString("socios");
-			String administrador = rs.getString("administrador");
-			String uf = rs.getString("uf");
-			String cidade = rs.getString("cidade");
-			String bairro = rs.getString("bairro");
-			String rua = rs.getString("rua");
-			String complemento = rs.getString("complemento");
-			String email = rs.getString("email");
+	// while (rs.next()) {
+	// long id_empresa = rs.getLong("id_empresa");
+	// long telefone = rs.getLong("telefone");
+	// long cnpj = rs.getLong("cnpj");
+	// long cep = rs.getLong("cep");
+	// int numero = rs.getInt("numero");
+	// String nome_fantasia = rs.getString("nome_fantasia");
+	// String razao_social = rs.getString("razao_social");
+	// String ativ_empresarial = rs.getString("ativ_empresarial");
+	// String propietario = rs.getString("propietario");
+	// String socios = rs.getString("socios");
+	// String administrador = rs.getString("administrador");
+	// String uf = rs.getString("uf");
+	// String cidade = rs.getString("cidade");
+	// String bairro = rs.getString("bairro");
+	// String rua = rs.getString("rua");
+	// String complemento = rs.getString("complemento");
+	// String email = rs.getString("email");
 
-			Empresa empresa = new Empresa(id_empresa, cnpj, nome_fantasia, razao_social, ativ_empresarial, propietario,
-					socios, administrador, uf, cep, cidade, bairro, rua, numero, complemento, email, telefone);
-			listEmpresas.add(empresa);
-		}
-		return listEmpresas;
-	}
+	// Empresa empresa = new Empresa(id_empresa, cnpj, nome_fantasia, razao_social,
+	// ativ_empresarial, propietario,
+	// socios, administrador, uf, cep, cidade, bairro, rua, numero, complemento,
+	// email, telefone);
+	// listEmpresas.add(empresa);
+	// }
+	// return listEmpresas;
+	// }
 
 	@Override
 	public boolean update(Empresa empresa) throws SQLException {
@@ -101,6 +105,7 @@ public class DaoEmpresa implements EmpresaDao {
 		PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setString(1, empresa.getEmail());
 		statement.setLong(2, empresa.getTelefone());
+		statement.setLong(3, empresa.getEmpresa_id());
 		rowUpdated = statement.executeUpdate() > 0;
 		return rowUpdated;
 	}

@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Optional;
 
 import main.equalizes_jsp.models.Escola;
-import sun.awt.EmbeddedFrame;
 
 public class DaoEscola implements EscolaDao {
 
@@ -65,40 +64,44 @@ public class DaoEscola implements EscolaDao {
 				coordenador, secretaria, uf, cep, cidade, bairro, rua, numero, complemento, email, telefone));
 	}
 
-	@Override
-	public List<Escola> findAll() throws SQLException {
-		List<Escola> listEscolas = new ArrayList<>();
-		String sql = "SELECT escola_id,cnpj,nome,turnos,qt_alunos,diretor_responsavel,vice_diretor,coordenador,secretaria,uf,cep,cidade,bairro,rua,numero,complemento,email,telefone from empresa";
+	// @Override
+	// public List<Escola> findAll() throws SQLException {
+	// List<Escola> listEscolas = new ArrayList<>();
+	// String sql = "SELECT
+	// escola_id,cnpj,nome,turnos,qt_alunos,diretor_responsavel,vice_diretor,coordenador,secretaria,uf,cep,cidade,bairro,rua,numero,complemento,email,telefone
+	// from empresa";
 
-		Connection conn = DataSourceFactory.getConnection();
-		Statement statement = conn.createStatement();
-		ResultSet rs = statement.executeQuery(sql);
+	// Connection conn = DataSourceFactory.getConnection();
+	// Statement statement = conn.createStatement();
+	// ResultSet rs = statement.executeQuery(sql);
 
-		while (rs.next()) {
-			long escola_id = rs.getLong("escola_id");
-			long telefone = rs.getLong("telefone");
-			long cnpj = rs.getLong("cnpj");
-			long cep = rs.getLong("cep");
-			int numero = rs.getInt("numero");
-			int qt_alunos = rs.getInt("qt_alunos");
-			String nome = rs.getString("nome");
-			String uf = rs.getString("uf");
-			String cidade = rs.getString("cidade");
-			String bairro = rs.getString("bairro");
-			String rua = rs.getString("rua");
-			String complemento = rs.getString("complemento");
-			String email = rs.getString("email");
-			String diretor_responsavel = rs.getString("diretor_responsavel");
-			String vice_diretor = rs.getString("vice_diretor");
-			String coordenador = rs.getString("coordenador");
-			String secretaria = rs.getString("secretaria");
+	// while (rs.next()) {
+	// long escola_id = rs.getLong("escola_id");
+	// long telefone = rs.getLong("telefone");
+	// long cnpj = rs.getLong("cnpj");
+	// long cep = rs.getLong("cep");
+	// int numero = rs.getInt("numero");
+	// int qt_alunos = rs.getInt("qt_alunos");
+	// String nome = rs.getString("nome");
+	// String uf = rs.getString("uf");
+	// String cidade = rs.getString("cidade");
+	// String bairro = rs.getString("bairro");
+	// String rua = rs.getString("rua");
+	// String complemento = rs.getString("complemento");
+	// String email = rs.getString("email");
+	// String diretor_responsavel = rs.getString("diretor_responsavel");
+	// String vice_diretor = rs.getString("vice_diretor");
+	// String coordenador = rs.getString("coordenador");
+	// String secretaria = rs.getString("secretaria");
 
-			Escola escola = new Escola(escola_id, cnpj, nome, nome, qt_alunos, diretor_responsavel, vice_diretor,
-					coordenador, secretaria, uf, cep, cidade, bairro, rua, numero, complemento, email, telefone);
-			listEscolas.add(escola);
-		}
-		return listEscolas;
-	}
+	// Escola escola = new Escola(escola_id, cnpj, nome, nome, qt_alunos,
+	// diretor_responsavel, vice_diretor,
+	// coordenador, secretaria, uf, cep, cidade, bairro, rua, numero, complemento,
+	// email, telefone);
+	// listEscolas.add(escola);
+	// }
+	// return listEscolas;
+	// }
 
 	// TODO update qt_alunos
 	@Override
@@ -115,7 +118,7 @@ public class DaoEscola implements EscolaDao {
 
 	@Override
 	public boolean save(Escola escola) throws SQLException {
-		String sql = "INSERT into escola(nome,cnpj,uf,cep,cidade,email,telefone) VALUES(?,?,?,?,?,?,?) where escola_id=?";
+		String sql = "INSERT into escola(nome,cnpj,uf,cep,cidade,email,telefone) VALUES(?,?,?,?,?,?,?)";
 		boolean rowInserted = false;
 
 		Connection conn = DataSourceFactory.getConnection();
