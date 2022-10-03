@@ -12,21 +12,21 @@ public class Interese {
 	}
 
 	// alteracoes
-	public Interese(long interese_id, String texto, String imagem, long data_mod) {
+	public Interese(final long interese_id, final String texto, final String imagem, final long data_mod) {
 		this.interese_id = interese_id;
 		this.texto = texto;
 		this.imagem = imagem;
 		this.data_mod = data_mod;
 	}
 
-	public Interese(long interese_id, long id_perfil, String texto) {
+	public Interese(final long interese_id, final long id_perfil, final String texto) {
 		this.interese_id = interese_id;
 		this.id_perfil = id_perfil;
 		this.texto = texto;
 	}
 
 	// criacao
-	public Interese(long interese_id, long id_perfil, String texto, String imagem) {
+	public Interese(final long interese_id, final long id_perfil, final String texto, final String imagem) {
 		this.interese_id = interese_id;
 		this.id_perfil = id_perfil;
 		this.texto = texto;
@@ -37,7 +37,7 @@ public class Interese {
 		return interese_id;
 	}
 
-	public void setInterese_id(long interese_id) {
+	public void setInterese_id(final long interese_id) {
 		this.interese_id = interese_id;
 	}
 
@@ -45,7 +45,7 @@ public class Interese {
 		return id_perfil;
 	}
 
-	public void setId_perfil(long id_perfil) {
+	public void setId_perfil(final long id_perfil) {
 		this.id_perfil = id_perfil;
 	}
 
@@ -53,7 +53,7 @@ public class Interese {
 		return texto;
 	}
 
-	public void setTexto(String texto) {
+	public void setTexto(final String texto) {
 		this.texto = texto;
 	}
 
@@ -61,7 +61,7 @@ public class Interese {
 		return imagem;
 	}
 
-	public void setImagem(String imagem) {
+	public void setImagem(final String imagem) {
 		this.imagem = imagem;
 	}
 
@@ -69,7 +69,7 @@ public class Interese {
 		return data_criado;
 	}
 
-	public void setData_criado(long data_criado) {
+	public void setData_criado(final long data_criado) {
 		this.data_criado = data_criado;
 	}
 
@@ -77,7 +77,7 @@ public class Interese {
 		return data_mod;
 	}
 
-	public void setData_mod(long data_mod) {
+	public void setData_mod(final long data_mod) {
 		this.data_mod = data_mod;
 	}
 

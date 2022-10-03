@@ -9,7 +9,7 @@ public class PerfilEscola {
 	protected boolean ativo;
 	protected long data_criado;
 	protected long data_mod;
-	protected List<Long> id_projeto;
+	protected Long id_projeto;
 	protected long id_escola;
 
 	public PerfilEscola() {
@@ -22,15 +22,29 @@ public class PerfilEscola {
 	}
 
 	// projetos
-	public PerfilEscola(long perfil_escola_id, List<Long> id_projeto) {
+	public PerfilEscola(long perfil_escola_id, long id_projeto) {
 		this.perfil_escola_id = perfil_escola_id;
 		this.id_projeto = id_projeto;
+	}
+
+	public PerfilEscola(long perfil_escola_id) {
+		this.perfil_escola_id = perfil_escola_id;
 	}
 
 	// Atualiza senha
 	public PerfilEscola(long perfil_escola_id, String senha) {
 		this.perfil_escola_id = perfil_escola_id;
 		this.senha = senha;
+	}
+
+	public PerfilEscola(long perfil_escola_id, String email, String senha, boolean ativo, long id_projeto,
+			long id_escola) {
+		this.perfil_escola_id = perfil_escola_id;
+		this.email = email;
+		this.senha = senha;
+		this.ativo = ativo;
+		this.id_projeto = id_projeto;
+		this.id_escola = id_escola;
 	}
 
 	// cria perfil
@@ -87,14 +101,6 @@ public class PerfilEscola {
 
 	public void setData_mod(final long data_mod) {
 		this.data_mod = data_mod;
-	}
-
-	public List<Long> getId_projeto() {
-		return id_projeto;
-	}
-
-	public void setId_projeto(final List<Long> id_projeto) {
-		this.id_projeto = id_projeto;
 	}
 
 	public long getId_escola() {

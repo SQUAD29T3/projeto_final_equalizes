@@ -2,44 +2,6 @@ package main.equalizes_jsp.models;
 
 //para cadastro empresa
 public class Empresa {
-	public Empresa(String razao_social, long cnpj, String uf, long cep, String cidade, String email, long telefone) {
-		this.razao_social = razao_social;
-		this.cnpj = cnpj;
-		this.uf = uf;
-		this.cep = cep;
-		this.cidade = cidade;
-		this.email = email;
-		this.telefone = telefone;
-	}
-
-	// Update email/telefone
-	public Empresa(long empresa_id, String email, long telefone) {
-		this.empresa_id = empresa_id;
-		this.email = email;
-		this.telefone = telefone;
-	}
-
-	public Empresa(long empresa_id, long cnpj, String nome_fantasia, String razao_social, String ativ_empresarial,
-			String propietario, String socios, String administrador, String uf, long cep, String cidade, String bairro,
-			String rua, int numero, String complemento, String email, long telefone) {
-		this.empresa_id = empresa_id;
-		this.cnpj = cnpj;
-		this.nome_fantasia = nome_fantasia;
-		this.razao_social = razao_social;
-		this.ativ_empresarial = ativ_empresarial;
-		this.propietario = propietario;
-		this.socios = socios;
-		this.administrador = administrador;
-		this.uf = uf;
-		this.cep = cep;
-		this.cidade = cidade;
-		this.bairro = bairro;
-		this.rua = rua;
-		this.numero = numero;
-		this.complemento = complemento;
-		this.email = email;
-		this.telefone = telefone;
-	}
 
 	protected long empresa_id;
 	protected long cnpj;
@@ -58,6 +20,51 @@ public class Empresa {
 	protected String complemento;
 	protected String email;
 	protected long telefone;
+
+	public Empresa(final String razao_social, final long cnpj, final String uf, final long cep, final String cidade,
+			final String email, final long telefone) {
+		this.razao_social = razao_social;
+		this.cnpj = cnpj;
+		this.uf = uf;
+		this.cep = cep;
+		this.cidade = cidade;
+		this.email = email;
+		this.telefone = telefone;
+	}
+
+	public Empresa(final long empresa_id) {
+		this.empresa_id = empresa_id;
+	}
+
+	// Update email/telefone
+	public Empresa(final long empresa_id, final String email, final long telefone) {
+		this.empresa_id = empresa_id;
+		this.email = email;
+		this.telefone = telefone;
+	}
+
+	public Empresa(final long empresa_id, final long cnpj, final String nome_fantasia, final String razao_social,
+			final String ativ_empresarial, final String propietario, final String socios, final String administrador,
+			final String uf, final long cep, final String cidade, final String bairro, final String rua,
+			final int numero, final String complemento, final String email, final long telefone) {
+		this.empresa_id = empresa_id;
+		this.cnpj = cnpj;
+		this.nome_fantasia = nome_fantasia;
+		this.razao_social = razao_social;
+		this.ativ_empresarial = ativ_empresarial;
+		this.propietario = propietario;
+		this.socios = socios;
+		this.administrador = administrador;
+		this.uf = uf;
+		this.cep = cep;
+		this.cidade = cidade;
+		this.bairro = bairro;
+		this.rua = rua;
+		this.numero = numero;
+		this.complemento = complemento;
+		this.email = email;
+		this.telefone = telefone;
+	}
 
 	public long getEmpresa_id() {
 		return empresa_id;

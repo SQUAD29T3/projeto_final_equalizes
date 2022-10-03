@@ -1,8 +1,10 @@
 package main.equalizes_jsp.models;
 
-import java.util.List;
-
 public class PerfilEmpresa {
+
+	public void setId_projeto(long id_projeto) {
+		this.id_projeto = id_projeto;
+	}
 
 	protected long perfil_empresa_id;
 	protected String email;
@@ -10,10 +12,14 @@ public class PerfilEmpresa {
 	protected boolean ativo;
 	protected long data_criado;
 	protected long data_mod;
-	protected List<Long> id_projeto;
+	protected long id_projeto;
 	protected long id_empresa;
 
-	public PerfilEmpresa(final long perfil_empresa_id, final List<Long> id_projeto) {
+	public PerfilEmpresa(long perfil_empresa_id) {
+		this.perfil_empresa_id = perfil_empresa_id;
+	}
+
+	public PerfilEmpresa(final long perfil_empresa_id, final long id_projeto) {
 		this.perfil_empresa_id = perfil_empresa_id;
 		this.id_projeto = id_projeto;
 	}
@@ -21,6 +27,16 @@ public class PerfilEmpresa {
 	public PerfilEmpresa(final long perfil_empresa_id, final boolean ativo) {
 		this.perfil_empresa_id = perfil_empresa_id;
 		this.ativo = ativo;
+	}
+
+	public PerfilEmpresa(long perfil_empresa_id, String email, String senha, boolean ativo, long id_projeto,
+			long id_empresa) {
+		this.perfil_empresa_id = perfil_empresa_id;
+		this.email = email;
+		this.senha = senha;
+		this.ativo = ativo;
+		this.id_projeto = id_projeto;
+		this.id_empresa = id_empresa;
 	}
 
 	public PerfilEmpresa(final String senha, final long perfil_empresa_id) {
@@ -31,6 +47,13 @@ public class PerfilEmpresa {
 	public PerfilEmpresa(final long perfil_empresa_id, final String email, final String senha, final boolean ativo,
 			final long id_empresa) {
 		this.perfil_empresa_id = perfil_empresa_id;
+		this.email = email;
+		this.senha = senha;
+		this.ativo = ativo;
+		this.id_empresa = id_empresa;
+	}
+
+	public PerfilEmpresa(String email, String senha, boolean ativo, long id_empresa) {
 		this.email = email;
 		this.senha = senha;
 		this.ativo = ativo;
@@ -83,14 +106,6 @@ public class PerfilEmpresa {
 
 	public void setData_mod(final long data_mod) {
 		this.data_mod = data_mod;
-	}
-
-	public List<Long> getId_projeto() {
-		return id_projeto;
-	}
-
-	public void setId_projeto(final List<Long> id_projeto) {
-		this.id_projeto = id_projeto;
 	}
 
 	public long getId_empresa() {
