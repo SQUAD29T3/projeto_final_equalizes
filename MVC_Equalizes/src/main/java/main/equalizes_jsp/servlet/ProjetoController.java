@@ -25,7 +25,25 @@ public class ProjetoController extends HttpServlet {
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse res)
 			throws ServletException, IOException {
 		final String action = req.getServletPath();
-		// TODO implementar funcionalidade no site
+		try {
+			switch (action) {
+			case "/cadastro_projeto": {
+				insertProjeto(req, res);
+				break;
+			}
+			case "/atualizar_projeto": {
+				updateProjeto(req, res);
+				break;
+			}
+			case "/delete_projeto": {
+				deleteProjeto(req, res);
+				break;
+			}
+
+			}
+		} catch (SQLException e) {
+			LOGGER.log(Level.SEVERE, "SQL Error", e);
+		}
 	}
 
 	private void updateProjeto(final HttpServletRequest req, final HttpServletResponse res)

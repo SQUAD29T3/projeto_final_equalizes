@@ -25,7 +25,27 @@ public class PerfilEscolaController extends HttpServlet {
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse res)
 			throws ServletException, IOException {
 		final String action = req.getServletPath();
-		// TODO implementar funcionalidade no site
+		try {
+			switch (action) {
+			case "/cadastro_perfil_escola": {
+				insertPerfilEscola(req, res);
+				break;
+			}
+			case "/atualizar_perfil_escola": {
+				updatePerfilEscola(req, res);
+				break;
+			}
+			case "/delete_perfil_escola": {
+				deletePerfilEscola(req, res);
+				break;
+			}
+
+			}
+		} catch (
+
+		SQLException e) {
+			LOGGER.log(Level.SEVERE, "SQL Error", e);
+		}
 	}
 
 	private void updatePerfilEscola(final HttpServletRequest req, final HttpServletResponse res)

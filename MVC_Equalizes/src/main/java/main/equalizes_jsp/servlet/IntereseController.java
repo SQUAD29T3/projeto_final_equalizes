@@ -25,7 +25,25 @@ public class IntereseController extends HttpServlet {
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse res)
 			throws ServletException, IOException {
 		final String action = req.getServletPath();
-		// TODO implementar funcionalidade no site
+		try {
+			switch (action) {
+			case "/cadastro_interese": {
+				insertInterese(req, res);
+				break;
+			}
+			case "/atualizar_interese": {
+				updateInterese(req, res);
+				break;
+			}
+			case "/delete_interese": {
+				deleteInterese(req, res);
+				break;
+			}
+
+			}
+		} catch (SQLException e) {
+			LOGGER.log(Level.SEVERE, "SQL Error", e);
+		}
 	}
 
 	private void updateInterese(final HttpServletRequest req, final HttpServletResponse res)

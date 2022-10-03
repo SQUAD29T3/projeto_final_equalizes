@@ -25,7 +25,25 @@ public class PerfilEmpresaController extends HttpServlet {
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse res)
 			throws ServletException, IOException {
 		final String action = req.getServletPath();
-		// TODO implementar funcionalidade no site
+		try {
+			switch (action) {
+			case "/cadastro_perfil_empresa": {
+				insertPerfilEmpresa(req, res);
+				break;
+			}
+			case "/atualizar_perfil_empresa": {
+				updatePerfilEmpresa(req, res);
+				break;
+			}
+			case "/delete_perfil_empresa": {
+				deletePerfilEmpresa(req, res);
+				break;
+			}
+
+			}
+		} catch (SQLException e) {
+			LOGGER.log(Level.SEVERE, "SQL Error", e);
+		}
 	}
 
 	private void updatePerfilEmpresa(final HttpServletRequest req, final HttpServletResponse res)

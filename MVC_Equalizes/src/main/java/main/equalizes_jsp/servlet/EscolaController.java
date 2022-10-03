@@ -3,6 +3,7 @@ package main.equalizes_jsp.servlet;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import jakarta.servlet.RequestDispatcher;
@@ -27,7 +28,25 @@ public class EscolaController extends HttpServlet {
 	protected void doGet(final HttpServletRequest req, final HttpServletResponse res)
 			throws ServletException, IOException {
 		final String action = req.getServletPath();
-		// TODO implementar funcionalidade no site
+		try {
+			switch (action) {
+			case "/cadastro_escola": {
+				insertEscola(req, res);
+				break;
+			}
+			case "/atualizar_escola": {
+				updateEscola(req, res);
+				break;
+			}
+			case "/delete_escola": {
+				deleteEscola(req, res);
+				break;
+			}
+
+			}
+		} catch (SQLException e) {
+			LOGGER.log(Level.SEVERE, "SQL Error", e);
+		}
 	}
 
 	private void updateEscola(final HttpServletRequest req, final HttpServletResponse res)
@@ -37,8 +56,6 @@ public class EscolaController extends HttpServlet {
 
 		final Escola escola = new Escola(escola_id, qt_alunos);
 		escolaDao.update(escola);
-		// TODO redirect????
-		// fazer algo
 	}
 
 	private void deleteEscola(final HttpServletRequest req, final HttpServletResponse res)
