@@ -108,7 +108,7 @@
                 <div class="row text-center mt-5">
                     <div class="col-md-12">
 
-                        <form action="" method="">
+                        <form action="/cadastro_projeto" method="POST">
 
                        <input type="text" name="descricao" id="" placeholder="Descreva o pedido aqui" />
 

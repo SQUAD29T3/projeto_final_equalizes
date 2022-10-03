@@ -103,7 +103,7 @@
                     </form>
 
 
-                    <form class="mt-5" action="" method="">
+                    <form class="mt-5" action="exclui_empresa" method="POST">
                         
                         <h3 class="bg-dark">EXCLUIR CADASTRO</h3>
 

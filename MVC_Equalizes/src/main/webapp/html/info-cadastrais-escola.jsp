@@ -103,7 +103,7 @@
 
                 <h2>INFORMAÇÕES CADASTRAIS</h2>
 
-                <form action="" method="">
+                <form action="/escola_cadastro" method="POST">
 
                     <input type="hidden" name="id" />
         

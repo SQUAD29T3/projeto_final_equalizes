@@ -81,7 +81,7 @@
 
 				<h2>INFORMAÇÕES CADASTRAIS</h2>
 
-				<form action="" method="">
+				<form action="/cadastro_empresa" method="POST">
 
 					<input type="hidden" name="id" />
 
