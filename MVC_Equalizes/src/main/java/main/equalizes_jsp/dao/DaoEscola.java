@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import main.equalizes_jsp.models.Escola;
@@ -25,18 +22,18 @@ public class DaoEscola implements EscolaDao {
 	}
 
 	@Override
-	public Optional<Escola> find(String id) throws SQLException {
-		String sql = "SELECT escola_id,cnpj,nome,turnos,qt_alunos,diretor_responsavel,vice_diretor,coordenador,secretaria,uf,cep,cidade,bairro,rua,numero,complemento,email,telefone where empresa_id=?";
+	public Optional<Escola> find(final String id) throws SQLException {
+		final String sql = "SELECT escola_id,cnpj,nome,turnos,qt_alunos,diretor_responsavel,vice_diretor,coordenador,secretaria,uf,cep,cidade,bairro,rua,numero,complemento,email,telefone where empresa_id=?";
 		int numero = 0, qt_alunos = 0;
 		long escola_id = 0, telefone = 0, cnpj = 0, cep = 0;
 		String nome = "", uf = "", cidade = "", bairro = "", rua = "", complemento = "", email = "", turnos = "",
 				diretor_responsavel = "", vice_diretor = "", coordenador = "", secretaria = "";
 
-		Connection conn = DataSourceFactory.getConnection();
+		final Connection conn = DataSourceFactory.getConnection();
 
-		PreparedStatement statement = conn.prepareStatement(sql);
+		final PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setString(1, id);
-		ResultSet rs = statement.executeQuery();
+		final ResultSet rs = statement.executeQuery();
 
 		if (rs.next()) {
 			escola_id = rs.getLong("id_empresa");
@@ -105,11 +102,11 @@ public class DaoEscola implements EscolaDao {
 
 	// TODO update qt_alunos
 	@Override
-	public boolean update(Escola escola) throws SQLException {
-		String sql = "Update escola SET qt_alunos=? where escola_id=?";
+	public boolean update(final Escola escola) throws SQLException {
+		final String sql = "Update escola SET qt_alunos=? where escola_id=?";
 		boolean rowUpdated = false;
-		Connection conn = DataSourceFactory.getConnection();
-		PreparedStatement statement = conn.prepareStatement(sql);
+		final Connection conn = DataSourceFactory.getConnection();
+		final PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setInt(1, escola.getQt_alunos());
 		statement.setLong(2, escola.getEscola_id());
 		rowUpdated = statement.executeUpdate() > 0;
@@ -117,12 +114,12 @@ public class DaoEscola implements EscolaDao {
 	}
 
 	@Override
-	public boolean save(Escola escola) throws SQLException {
-		String sql = "INSERT into escola(nome,cnpj,uf,cep,cidade,email,telefone) VALUES(?,?,?,?,?,?,?)";
+	public boolean save(final Escola escola) throws SQLException {
+		final String sql = "INSERT into escola(nome,cnpj,uf,cep,cidade,email,telefone) VALUES(?,?,?,?,?,?,?)";
 		boolean rowInserted = false;
 
-		Connection conn = DataSourceFactory.getConnection();
-		PreparedStatement statement = conn.prepareStatement(sql);
+		final Connection conn = DataSourceFactory.getConnection();
+		final PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setString(1, escola.getNome());
 		statement.setLong(2, escola.getCnpj());
 		statement.setString(3, escola.getUf());
@@ -135,12 +132,12 @@ public class DaoEscola implements EscolaDao {
 	}
 
 	@Override
-	public boolean delete(Escola escola) throws SQLException {
-		String sql = "DELETE from escola where escola_id=?";
+	public boolean delete(final Escola escola) throws SQLException {
+		final String sql = "DELETE from escola where escola_id=?";
 		boolean rowDeleted = false;
 
-		Connection conn = DataSourceFactory.getConnection();
-		PreparedStatement statement = conn.prepareStatement(sql);
+		final Connection conn = DataSourceFactory.getConnection();
+		final PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setLong(1, escola.getEscola_id());
 		rowDeleted = statement.executeUpdate() > 0;
 		return rowDeleted;
