@@ -30,6 +30,13 @@ public class Projeto {
 		this.estado = estado;
 	}
 
+	public Projeto(long id_interese, long id_perfil_escola, long id_perfil_empresa, String estado) {
+		this.id_interese = id_interese;
+		this.id_perfil_escola = id_perfil_escola;
+		this.id_perfil_empresa = id_perfil_empresa;
+		this.estado = estado;
+	}
+
 	public long getId_perfil_escola() {
 		return id_perfil_escola;
 	}

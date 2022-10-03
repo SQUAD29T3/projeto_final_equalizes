@@ -11,6 +11,21 @@ public class Interese {
 	public Interese() {
 	}
 
+	public Interese(final long id_perfil, final String texto, final String imagem) {
+		this.id_perfil = id_perfil;
+		this.texto = texto;
+		this.imagem = imagem;
+	}
+
+	public Interese(final long interese_id) {
+		this.interese_id = interese_id;
+	}
+
+	public Interese(final String texto, final long interese_id) {
+		this.texto = texto;
+		this.interese_id = interese_id;
+	}
+
 	// alteracoes
 	public Interese(final long interese_id, final String texto, final String imagem, final long data_mod) {
 		this.interese_id = interese_id;
