@@ -36,7 +36,7 @@ public class DataSourceFactory {
 				e.printStackTrace();
 			}
 			try {
-				daso.setUrl("mariadb://localhost:3306/java");
+				daso.setUrl("mysql://localhost:3306/java");
 			} catch (final SQLException e) {
 				e.printStackTrace();
 			}
