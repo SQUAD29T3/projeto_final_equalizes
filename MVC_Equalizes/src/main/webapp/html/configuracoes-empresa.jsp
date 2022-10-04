@@ -60,7 +60,7 @@
 				</p>
 
 				<ul>
-					<li><a href="#"> <span class="material-symbols-outlined">
+					<li><a href="perfil-empresa.jsp"> <span class="material-symbols-outlined">
 								home </span> INÍCIO
 					</a></li>
 					<li><a href="pedidos.jsp"> <span
@@ -70,7 +70,7 @@
 					<li><a href="info-cadastrais-empresa.jsp"> <span
 							class="material-symbols-outlined"> info </span> INFO. CADASTRAIS
 					</a></li>
-					<li><a href="configuracoes-empresa.jsp"> <span
+					<li><a href="#"> <span
 							class="material-symbols-outlined"> settings </span> CONFIGURAÇÕES
 					</a></li>
 				</ul>

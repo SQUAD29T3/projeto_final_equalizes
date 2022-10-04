@@ -77,109 +77,111 @@
 			</nav>
 			<!-- FIM MENU -->
 
-	       <main class="col-md-9">
+			<main class="col-md-9">
 
-                <h2>PEDIDOS</h2>
+				<h2>PEDIDOS</h2>
 
-                <div class="row text-center mt-5">
-                    <h3>SELECIONE O STATUS DO PEDIDO PARA VERIFICAR:</h3>
+				<div class="row text-center mt-5">
+					<h3>SELECIONE O STATUS DO PEDIDO PARA VERIFICAR:</h3>
 
-                    <div class="mt-2">
+					<div class="mt-2">
 
-                        <select name="status" id="status" class="p-2">
-                            <option value="escolha" disabled selected> Escolha: </option>
-                            <option value="novos">Novos pedidos</option>
-                            <option value="andamento">Em andamento</option>
-                            <option value="concluidos">Concluídos</option>
-                            <option value="todos">Listar todos</option>
-                        </select>
+						<select name="status" id="status" class="p-2">
+							<option value="escolha" disabled selected>Escolha:</option>
+							<option value="novos">Novos pedidos</option>
+							<option value="andamento">Em andamento</option>
+							<option value="concluidos">Concluídos</option>
+							<option value="todos">Listar todos</option>
+						</select>
 
-                    </div>
+					</div>
 
-                    <div class="col-md-12 mt-5 novos">
-                        
-                        <h4 class="bg-dark text-light p-2">Novos pedidos</h4>
+					<div class="col-md-12 mt-5 novos">
 
-                        <table>
-                            <tr>
-                                <th>ID</th>
-                                <th>SOLICITANTE</th>
-                                <th>DESCRIÇÃO</th>
-                                <th>DATA DO PEDIDO</th>
-                                <th>STATUS</th>
-                            </tr>
+						<h4 class="bg-dark text-light p-2">Novos pedidos</h4>
 
-                            <tr>
-                                <td>000</td>
-                                <td>IE</td>
-                                <td>5 Tablets</td>
-                                <td>00/00/0000</td>
-                                <td>Em aberto</td>
-                            </tr>
-                        </table>
+						<table>
+							<tr>
+								<th>ID</th>
+								<th>SOLICITANTE</th>
+								<th>DESCRIÇÃO</th>
+								<th>DATA DO PEDIDO</th>
+								<th>STATUS</th>
+							</tr>
 
-                    </div>
+							<tr>
+								<td>000</td>
+								<td>IE</td>
+								<td>5 Tablets</td>
+								<td>00/00/0000</td>
+								<td>Em aberto</td>
+								<td><button class="p-2 btn bg-success text-light">Aceitar</button></td>
+								<td><button class="p-2 btn bg-danger text-light">Rejeitar</button></td>
+							</tr>
+						</table>
 
-                    <div class="col-md-12 mt-5 andamento">
-                        
-                        <h4 class="bg-warning p-2">Em andamento</h4>
+					</div>
 
-                        <table>
-                            <tr>
-                                <th>ID</th>
-                                <th>SOLICITANTE</th>
-                                <th>DESCRIÇÃO</th>
-                                <th>DATA DO PEDIDO</th>
-                                <th>STATUS</th>
-                            </tr>
+					<div class="col-md-12 mt-5 andamento">
 
-                            <tr>
-                                <td>000</td>
-                                <td>IE</td>
-                                <td>5 Tablets</td>
-                                <td>00/00/0000</td>
-                                <td>Em andamento</td>
-                            </tr>
-                        </table>
+						<h4 class="bg-warning p-2">Em andamento</h4>
 
-                    </div>
+						<table>
+							<tr>
+								<th>ID</th>
+								<th>SOLICITANTE</th>
+								<th>DESCRIÇÃO</th>
+								<th>DATA DO PEDIDO</th>
+								<th>STATUS</th>
+							</tr>
 
+							<tr>
+								<td>000</td>
+								<td>IE</td>
+								<td>5 Tablets</td>
+								<td>00/00/0000</td>
+								<td>Em andamento</td>
+							</tr>
+						</table>
 
-
-                    <div class="col-md-12 mt-5 concluidos">
-                        
-                        <h4 class="bg-success text-light p-2">Concluídos</h4>
-
-                        <table>
-                            <tr>
-                                <th>ID</th>
-                                <th>SOLICITANTE</th>
-                                <th>DESCRIÇÃO</th>
-                                <th>DATA DO PEDIDO</th>
-                                <th>STATUS</th>
-                            </tr>
-
-                            <tr>
-                                <td>000</td>
-                                <td>IE</td>
-                                <td>5 Tablets</td>
-                                <td>00/00/0000</td>
-                                <td>concluído</td>
-                            </tr>
-                        </table>
-
-                    </div>
+					</div>
 
 
-                </div>
 
-            </main>
+					<div class="col-md-12 mt-5 mb-5 concluidos">
+
+						<h4 class="bg-success text-light p-2">Concluídos</h4>
+
+						<table>
+							<tr>
+								<th>ID</th>
+								<th>SOLICITANTE</th>
+								<th>DESCRIÇÃO</th>
+								<th>DATA DO PEDIDO</th>
+								<th>STATUS</th>
+							</tr>
+
+							<tr>
+								<td>000</td>
+								<td>IE</td>
+								<td>5 Tablets</td>
+								<td>00/00/0000</td>
+								<td>concluído</td>
+							</tr>
+						</table>
+
+					</div>
+
+
+				</div>
+
+			</main>
 
 		</div>
 
 
 	</div>
 
-<script src="../js/pedidos.js"></script>
+	<script src="../js/pedidos.js"></script>
 </body>
 </html>
