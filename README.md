@@ -12,13 +12,11 @@
 
 <ul>
 
-<li> Giovane José Da Silva Souza </li>
-<li> João Rodrigo Lapsky </li>
-<li> Karine Luiz Iglesias Silva </li>
-<li> Maori Amorim De Mello Lopes </li>
-<li> Maria Renata Figlie </li>
-<li> Tarsis Cardoso Ferreira Rodrigues </li>
-<li> Thamires Santana Silva </li>
+<li> Giovane José Da Silva Souza (<a href="https://github.com/giovanesouza" target="_blank">Repositório</a>)</li>
+<li> Karine Luiz Iglesias Silva (<a href="https://github.com/KarineIglesias" target="_blank">Repositório</a>)</li>
+<li> Maori Amorim De Mello Lopes (<a href="https://github.com/m40r1" target="_blank">Repositório</a>)</li>
+<li> Maria Renata Figlie (<a href="https://github.com/renatafiglie" target="_blank">Repositório</a>)</li>
+<li> Thamires Santana Silva (<a href="https://github.com/thamysantana" target="_blank">Repositório</a>)</li>
 
 </ul>
 
