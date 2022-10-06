@@ -156,9 +156,8 @@
 
                         <div class="col-sm-6 mt-3">
 
-
                             <label>Razão Social:</label> <br>
-                            <input type="text" name="razaoSocial" placeholder="Digite a Razão Social da Empresa" required>
+                            <input type="text" name="razaoSocial" placeholder="Digite a Razão Social da Empresa" required />
 
 
                         </div>
@@ -167,8 +166,8 @@
                         <div class="col-sm-6 mt-3">
 
                             <label>CNPJ:</label> <br>
-                            <input type="text" name="cnpj" maxlength="14" id="cnpj"
-                                placeholder="Digite o CNPJ (Apenas Números)" required>
+                            <input type="text" name="cnpj" maxlength="14" id="cnpj" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                placeholder="Digite o CNPJ (Apenas Números)" required />
 
 
                         </div>
@@ -184,7 +183,7 @@
 
                         <div class="col-md-2 mt-3">
                             <label for="numero">Nº:</label>
-                            <input type="text" name="numero" maxlength="6" />
+                            <input type="text" name="numero" maxlength="6" required />
                         </div>
 
                         <div class="col-md-4 mt-3">
@@ -200,7 +199,7 @@
                         <div class="col-md-6 mt-3">
 
                             <label>Cidade:</label>
-                            <input type="text" name="cidade" disabled>
+                            <input type="text" name="cidade" disabled />
 
                         </div>
 
@@ -210,7 +209,7 @@
 
                             <label>Estado:</label>
 
-                            <input type="text" name="estado" disabled>
+                            <input type="text" name="estado" disabled />
 
                         </div>
 
@@ -219,7 +218,7 @@
 
 
                             <label>CEP:</label>
-                            <input type="text" maxlength="8" name="cep" placeholder="Digite o Cep">
+                            <input type="text" maxlength="8" name="cep" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Digite o Cep" />
 
 
                         </div>
@@ -234,7 +233,7 @@
                         <div class="col-sm-6 mt-3">
 
                             <label>Telefone:</label> <br>
-                            <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
+                            <input type="text" name="telefone" id="telefone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="(xx) xxxxx-xxxx" maxlength="11" required>
 
                         </div>
 
@@ -242,7 +241,7 @@
                         <div class="col-sm-6 mt-3">
 
                             <label>E-mail Institucional:</label> <br>
-                            <input type="email" name="email" placeholder="Digite o E-mail">
+                            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Digite o E-mail">
 
                         </div>
 
@@ -253,7 +252,6 @@
                     <div class="row m-0">
 
                         <div class="col-sm-12 mt-3">
-
                             <label>Você confirma a autencidade dos dados informados acima?</label>
                         </div>
 
@@ -280,8 +278,6 @@
             </form>
 
             <!-- Fim Formulario -->
-
-
 
 
         </main>
